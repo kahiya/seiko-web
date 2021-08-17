@@ -1252,6 +1252,17 @@ body {
   background-color: skyblue;
 }
 
+.page-header-block {
+  width: 100%;
+  height: 400px;
+  background-color: pink;
+}
+
+.page-header-title {
+  color: #fff;
+  text-align: center;
+}
+
 /*
 // 大きなサイズで読み込み
 @mixin mq-l {
