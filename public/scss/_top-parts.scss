@@ -41,7 +41,7 @@ body.appear .splashbg1 {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  content: "";
+  content: '';
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -72,7 +72,7 @@ body.appear .splashbg2 {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  content: "";
+  content: '';
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -278,7 +278,7 @@ body.appear #wrapper {
 
 /* 丸の描写 */
 .scrolldown2:before {
-  content: "";
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -289,8 +289,7 @@ body.appear #wrapper {
   border-radius: 50%;
   background: #eee;
   /*丸の動き1.6秒かけて透過し、永遠にループ*/
-  animation: circlemove 1.6s ease-in-out infinite,
-    cirlemovehide 1.6s ease-out infinite;
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
 }
 
 /*下からの距離が変化して丸の全体が上から下に動く*/
@@ -321,7 +320,7 @@ body.appear #wrapper {
 
 /* 線の描写 */
 .scrolldown2:after {
-  content: "";
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -370,7 +369,7 @@ body.appear #wrapper {
 /*線の設定*/
 .bordertop span::before,
 .bordertop span::after {
-  content: "";
+  content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
   width: 1px;
@@ -401,7 +400,7 @@ body.appear #wrapper {
 
 /*背景の設定*/
 .bordertop::before {
-  content: "";
+  content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
   left: 0;
@@ -620,7 +619,7 @@ body.appear #wrapper {
 .slide-in {
   overflow: hidden;
   display: inline-block;
-  padding: 0 10px; /*英語がはみ出るので見えるように余白追記*/
+  //padding: 0 10px; /*英語がはみ出るので見えるように余白追記*/
 }
 
 .slide-in_inner {
@@ -737,7 +736,7 @@ span.mask {
 
 .circle span.mask::before {
   position: absolute;
-  content: "";
+  content: '';
   transform: scale(0); /*円の大きさ初期値は0*/
   opacity: 0; /*透過0*/
   width: 100%; /*円のサイズ指定*/
@@ -774,7 +773,7 @@ span.mask {
 }
 
 .bgDU .mask::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 2;
   left: 0;
@@ -828,7 +827,7 @@ span.mask {
   /*以下画面で背景画像を表示させるための指定*/
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-img1.jpg") no-repeat top center; /*背景画像の設定*/
+  background: url('../img/hero-img1.jpg') no-repeat top center; /*背景画像の設定*/
   background-size: cover;
   transform-origin: center; /*変化する基点を中心からに設定*/
 }
@@ -837,5 +836,102 @@ span.mask {
 #footer {
   position: relative; /*#header-imgよりも配置を上にするためにrelativeをつける*/
   z-index: 3; /*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
-  background: #f8f9fa;
+  background: #fffdf9;
+}
+
+/*==================================================
+  独自scss
+===================================*/
+.header-logo {
+  display: block;
+  width: 100px;
+}
+
+.toppage-title-block {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.toppage-title {
+  width: 300px;
+}
+
+// menu 部分 -----------------------------------------
+
+.top_menu-wrapper {
+  //max-width: 1000px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+  display: block;
+}
+
+.top_menu-img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.top_menu-title-block {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  width: 425px;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.845);
+  padding: 40px 0;
+}
+
+.top_menu-title-header {
+  font-size: 28px;
+  color: #87775c;
+}
+
+.top_menu-title {
+  font-size: 32px;
+}
+
+.top_menu-title-note {
+  font-size: 20px;
+  color: #8ea362;
+}
+
+.top_menu-title-view {
+  position: relative;
+  text-align: left;
+  padding-left: 150px;
+  margin-top: 20px;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100px;
+    background-image: url(../img/icon_arrow-bk.svg);
+    width: 110px;
+    height: 20px;
+  }
+}
+
+.top_menu1-frame {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  width: 425px;
+  height: 280px;
+}
+
+// contact 部分 -----------------------------------------
+#contact {
+  text-align: center;
 }

@@ -58,10 +58,11 @@
 /*横幅が768px以下になった際の指定*/
 @media only screen and (max-width: 768px) {
   #g-nav,
-#g-nav.panelactive #g-nav-list {
+  #g-nav.panelactive #g-nav-list {
     width: 100%;
   }
 }
+
 /*ナビゲーション*/
 #g-nav ul {
   /*ナビゲーション天地中央揃え*/
@@ -87,8 +88,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 #g-nav li a:hover {
@@ -112,8 +113,8 @@
 /*×に変化*/
 .openbtn span {
   display: inline-block;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
   position: absolute;
   left: 14px;
   height: 3px;
@@ -159,8 +160,12 @@
 /*===========================================================*/
 .sort-btn {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   margin: 50px 0;
   list-style: none;
@@ -174,7 +179,7 @@
 }
 
 .sort-btn li::after {
-  content: "";
+  content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: -5px;
@@ -184,8 +189,8 @@
   height: 2px;
   background: #a0a0a0;
   /*アニメーションの指定*/
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
   /*X方向0、Y方向1*/
@@ -205,17 +210,21 @@
 /*横幅が375px以下になった際の指定*/
 @media only screen and (max-width: 375px) {
   .sort-btn {
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
             justify-content: space-between;
   }
-
   .sort-btn li {
     width: 48%;
     margin: 0 0 10px 0;
     text-align: center;
   }
 }
+
 /*===========================================================*/
 /* 機能編 8-1-7　スクロール途中からリンクボタンの形状が変化 */
 /*===========================================================*/
@@ -229,8 +238,8 @@
   /*はじめは非表示*/
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.5s, visibility 0.5s;
-  transition: opacity 0.5s, visibility 0.5s;
+  -webkit-transition: opacity .5s, visibility .5s;
+  transition: opacity .5s, visibility .5s;
   /*それぞれに0.5秒の変化のアニメーション*/
   /*縦書き*/
   -webkit-writing-mode: vertical-rl;
@@ -266,6 +275,7 @@
     bottom: 20px;
   }
 }
+
 /*.scroll-viewクラスがついたら出現*/
 .scroll-top.scroll-view {
   opacity: 1;
@@ -403,11 +413,11 @@ _:-ms-lang(x), .js-pagetop a::before {
     width: 49.5%;
     /*横並びで2つ表示*/
   }
-
   .item-content {
     padding: 10px;
   }
 }
+
 /*＝＝＝fancyboxサムネイル背景と画像選択時の枠線の指定*/
 .fancybox-thumbs {
   background: transparent !important;
@@ -460,6 +470,7 @@ _:-ms-lang(x), .js-pagetop a::before {
     margin-top: 0;
   }
 }
+
 /*===========================================================*/
 /*    印象編　8-1　テキストがバラバラに出現 */
 /*===========================================================*/
@@ -468,8 +479,8 @@ _:-ms-lang(x), .js-pagetop a::before {
 }
 
 .TextRandomAnime.appearRandomtext span {
-  -webkit-animation: text_randomanime_on 0.5s ease-out forwards;
-          animation: text_randomanime_on 0.5s ease-out forwards;
+  -webkit-animation: text_randomanime_on .5s ease-out forwards;
+          animation: text_randomanime_on .5s ease-out forwards;
 }
 
 @-webkit-keyframes text_randomanime_on {
@@ -489,6 +500,7 @@ _:-ms-lang(x), .js-pagetop a::before {
     opacity: 1;
   }
 }
+
 .TextRandomAnime.appearRandomtext span:nth-child(2n) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
@@ -511,8 +523,8 @@ _:-ms-lang(x), .js-pagetop a::before {
 .grid img {
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   /*移り変わる速さを変更したい場合はこの数値を変更*/
 }
 
@@ -559,10 +571,11 @@ _:-ms-lang(x), .js-pagetop a::before {
     background-position: 0% 50%;
   }
 }
+
 /* レイアウトのためのCSS */
 body {
-  background: #FFFCF1;
-  font-family: "Noto Serif JP", serif;
+  background: #fffcf1;
+  font-family: 'Noto Serif JP', serif;
   color: #555;
   font-size: 1rem;
   line-height: 1.85;
@@ -573,9 +586,6 @@ body {
   letter-spacing: 0.2em;
 }
 
-/*body.appear{
-    background:#f8f9fa;
-}*/
 ul {
   margin: 0;
   padding: 0;
@@ -597,7 +607,8 @@ img {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* font-family */
@@ -607,7 +618,7 @@ h1,
 #blog h2,
 #footer dl dd,
 #splash-logo {
-  font-family: "Parisienne", cursive;
+  font-family: 'Parisienne', cursive;
 }
 
 /* heading */
@@ -622,10 +633,11 @@ h1,
 
 @media screen and (max-width: 768px) {
   #menu h2,
-#blog h2 {
+  #blog h2 {
     font-size: 3rem;
   }
 }
+
 /* area */
 #container {
   overflow-x: hidden;
@@ -633,6 +645,7 @@ h1,
 
 .inner {
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 70px;
 }
@@ -642,6 +655,7 @@ h1,
     padding: 30px;
   }
 }
+
 /* splash */
 #splash-logo p {
   font-size: 1.8rem;
@@ -652,13 +666,12 @@ h1,
 /* header */
 .header-area {
   position: fixed;
-  left: 50%;
-  top: 50%;
+  left: 8%;
+  top: 8%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
-  text-align: center;
 }
 
 .header-area h1 {
@@ -684,15 +697,14 @@ h1,
   .header-area h1 {
     font-size: 4rem;
   }
-
   .header-area p {
     font-size: 0.8rem;
   }
-
   .header-area p br {
     display: block;
   }
 }
+
 /* gnavi */
 #g-nav-list li:nth-of-type(1) a {
   font-size: 2rem;
@@ -735,6 +747,8 @@ h1,
 
 /* menu */
 #menu {
+  width: 100%;
+  text-align: center;
   padding: 70px 0;
 }
 
@@ -754,7 +768,8 @@ h1,
 
 #menu .menu-area {
   padding: 20px;
-  box-shadow: 5px 0 10px #ccc;
+  -webkit-box-shadow: 5px 0 10px #ccc;
+          box-shadow: 5px 0 10px #ccc;
 }
 
 #menu .menu-btn {
@@ -765,14 +780,24 @@ h1,
 /* contact */
 #contact {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
@@ -792,30 +817,30 @@ h1,
   #contact .contact-img {
     width: 60%;
   }
-
   #contact .contact-area {
     width: 35%;
   }
 }
+
 @media screen and (max-width: 768px) {
   #contact .contact-img {
     width: 48%;
   }
-
   #contact .contact-area {
     width: 48%;
   }
 }
+
 @media screen and (max-width: 600px) {
   #contact .contact-img,
-#contact .contact-area {
+  #contact .contact-area {
     width: 100%;
   }
-
   #contact .contact-img {
     margin: 0 0 50px 0;
   }
 }
+
 #contact .contact-area h2 {
   font-size: 1.3rem;
   margin: 0 0 10px 0;
@@ -838,11 +863,17 @@ h1,
 
 .blog-area {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   overflow: hidden;
 }
 
@@ -853,10 +884,16 @@ h1,
 .blog-area .blog-block {
   width: 68%;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .blog-area .blog-block article {
@@ -900,41 +937,42 @@ h1,
 }
 
 @media screen and (max-width: 1300px) {
-  .blog-area .blog-block article:nth-of-type(n+1) {
+  .blog-area .blog-block article:nth-of-type(n + 1) {
     width: 48%;
   }
 }
+
 @media screen and (max-width: 820px) {
   .blog-area article:nth-of-type(1) {
     width: 50%;
     margin: 0 auto 3vh auto;
   }
-
   .blog-area .blog-block article:nth-of-type(1) {
     margin: 0 0 3vh 0;
   }
-
   .blog-area .blog-block {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .blog-area .blog-block article:nth-of-type(n+1) {
+  .blog-area .blog-block article:nth-of-type(n + 1) {
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
   }
-
   .blog-area article:nth-of-type(1) {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 450px) {
-  .blog-area .blog-block article:nth-of-type(n+1) {
+  .blog-area .blog-block article:nth-of-type(n + 1) {
     width: 100%;
     -webkit-animation-delay: 0s !important;
             animation-delay: 0s !important;
   }
 }
+
 .blog-area h3 {
   font-size: 1rem;
   margin: 0 0 20px 0;
@@ -944,11 +982,11 @@ h1,
   .blog-area h3 {
     font-size: 0.9rem;
   }
-
   .blog-area p {
     display: none;
   }
 }
+
 .blog-area time {
   font-size: 0.8rem;
 }
@@ -971,19 +1009,20 @@ h1,
     width: 100%;
     height: auto;
   }
-
   .blog-area .blog-block article:nth-of-type(1) img {
     width: auto;
     height: 32vh;
   }
 }
+
 @media screen and (max-width: 450px) {
   .blog-area img,
-.blog-area .blog-block article:nth-of-type(1) img {
+  .blog-area .blog-block article:nth-of-type(1) img {
     width: 100%;
     height: auto;
   }
 }
+
 .blog-area figure time {
   position: absolute;
   bottom: 0;
@@ -1014,11 +1053,19 @@ h1,
 #footer {
   border-top: 1px solid #ccc;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
@@ -1039,11 +1086,13 @@ h1,
     margin: 50px 0;
   }
 }
+
 @media screen and (max-width: 768px) {
   #footer dl dd {
     font-size: 1.5rem;
   }
 }
+
 #footer .footer-list {
   width: 65%;
   text-align: right;
@@ -1076,12 +1125,13 @@ h1,
 
 @media screen and (max-width: 900px) {
   #footer dl,
-#footer .footer-list,
-#footer small {
+  #footer .footer-list,
+  #footer small {
     width: 100%;
     text-align: center;
   }
 }
+
 /* ########################################################
 ここから独自スタイル　
 ######################################################## */
@@ -1114,24 +1164,30 @@ body {
 */
 /* Noto Serif JP */
 .font-noto {
-  font-family: "Noto Serif JP", serif;
+  font-family: 'Noto Serif JP', serif;
 }
 
 /* Martel */
 .font-Martel {
-  font-family: "Martel", serif;
+  font-family: 'Martel', serif;
 }
 
 /* Shippori Mincho */
 .font-shippori {
-  font-family: "Shippori Mincho B1", serif;
+  font-family: 'Shippori Mincho B1', serif;
 }
 
 #top_about {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 140px;
 }
@@ -1146,11 +1202,19 @@ body {
 #top_about .top_about-area {
   width: 52%;
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
@@ -1158,34 +1222,36 @@ body {
   #top_about .top_about-img {
     width: 30%;
   }
-
   #top_about .top_about-area {
     width: 68%;
   }
 }
+
 @media screen and (max-width: 768px) {
   #top_about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-
   #top_about .top_about-img,
-#top_about .top_about-area {
+  #top_about .top_about-area {
     width: 100%;
   }
-
   #top_about .top_about-img {
     min-height: 250px;
   }
-
   #top_about .top_about-area {
     margin: 0 0 140px 0;
     min-height: 20em;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
             justify-content: center;
   }
 }
+
 #top_about .top_about-area h2,
 #top_about .top_about-area p,
 #top_about .top_about-area .top_about-btn a {
@@ -1221,72 +1287,65 @@ body {
   #top_about .top_about-area h2 {
     line-height: 2;
   }
-
   #top_about .top_about-area p {
     line-height: 2.3;
   }
 }
+
 @media screen and (max-width: 768px) {
   #top_about .top_about-area .top_about-btn {
     width: 100%;
     top: 50px;
     text-align: center;
   }
-
   .btn04 {
     width: 250px;
   }
-
   #top_about .top_about-area h2,
-#top_about .top_about-area p {
+  #top_about .top_about-area p {
     width: auto;
   }
-
   #top_about .top_about-area h2 {
     margin: 0 0 0 20px;
     line-height: 2.2;
   }
-
   #top_about .top_about-area p {
     line-height: 2;
   }
-
   #top_about .top_about-area .top_about-btn a {
     -ms-writing-mode: lr-tb;
     -webkit-writing-mode: horizontal-tb;
     writing-mode: horizontal-tb;
   }
-
   #top_about .btn04 {
     padding: 10px 30px;
   }
 }
+
 @media screen and (max-width: 470px) {
   #top_about .top_about-area h2 {
     line-height: 1.8;
   }
-
   #top_about .top_about-area p {
     height: 23em;
   }
-
   _:-ms-lang(x)::-ms-backdrop, #top_about .top_about-area p {
     width: 8em;
   }
-
   #top_about .top_about-area p br {
     display: none;
   }
 }
+
 @media screen and (max-width: 350px) {
   #top_about .top_about-area h2 {
     line-height: 1.6;
   }
-
   #top_about .top_about-area p {
     line-height: 1.8;
   }
 }
+
 /*==================================================
 機能編　4-2-5　背景色が伸びる（中央から外）
 ===================================*/
@@ -1331,7 +1390,7 @@ body.appear .splashbg1 {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  content: "";
+  content: '';
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -1340,7 +1399,7 @@ body.appear .splashbg1 {
   left: 50%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  background-color: #FFFCF1;
+  background-color: #fffcf1;
   /*伸びる背景色の設定*/
 }
 
@@ -1381,6 +1440,7 @@ body.appear .splashbg1 {
             transform: scaleX(0);
   }
 }
+
 /*左に消えるエリア*/
 body.appear .splashbg2 {
   -webkit-animation-name: PageAnime2;
@@ -1391,7 +1451,7 @@ body.appear .splashbg2 {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  content: "";
+  content: '';
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -1441,6 +1501,7 @@ body.appear .splashbg2 {
             transform: scaleX(0);
   }
 }
+
 /*画面遷移の後現れるコンテンツ設定*/
 #wrapper {
   opacity: 0;
@@ -1477,6 +1538,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 /*==================================================
 機能編　5-1-25 クリックしたらナビ背景コンテンツがぼかされる※IE11非対応
 ===================================*/
@@ -1640,7 +1702,7 @@ body.appear #wrapper {
 
 /* 丸の描写 */
 .scrolldown2:before {
-  content: "";
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -1672,6 +1734,7 @@ body.appear #wrapper {
     bottom: -5px;
   }
 }
+
 /*上から下にかけて丸が透過→不透明→透過する*/
 @-webkit-keyframes cirlemovehide {
   0% {
@@ -1701,9 +1764,10 @@ body.appear #wrapper {
     opacity: 0;
   }
 }
+
 /* 線の描写 */
 .scrolldown2:after {
-  content: "";
+  content: '';
   /*描画位置*/
   position: absolute;
   bottom: 0;
@@ -1751,7 +1815,7 @@ body.appear #wrapper {
 /*線の設定*/
 .bordertop span::before,
 .bordertop span::after {
-  content: "";
+  content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
   width: 1px;
@@ -1783,7 +1847,7 @@ body.appear #wrapper {
 
 /*背景の設定*/
 .bordertop::before {
-  content: "";
+  content: '';
   /*絶対配置で線の位置を決める*/
   position: absolute;
   left: 0;
@@ -1812,10 +1876,16 @@ body.appear #wrapper {
 /*リンクの形状*/
 #page-top a {
   display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
           align-items: center;
   background: #e2a2b1;
   width: 60px;
@@ -1877,6 +1947,7 @@ body.appear #wrapper {
             transform: translateY(0);
   }
 }
+
 /*　下に下がる動き　*/
 #page-top.DownMove {
   -webkit-animation: DownAnime 0.5s forwards;
@@ -1908,6 +1979,7 @@ body.appear #wrapper {
             transform: translateY(100px);
   }
 }
+
 /*==================================================
 機能編　6-1-6 複数画像を並列に見せる
 ===================================*/
@@ -2022,6 +2094,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 /* 4-4 ボンッ（拡大） */
 .zoomOut {
   -webkit-animation-name: zoomOutAnime;
@@ -2057,6 +2130,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
 .zoomOutTrigger {
   opacity: 0;
@@ -2070,8 +2144,6 @@ body.appear #wrapper {
 .slide-in {
   overflow: hidden;
   display: inline-block;
-  padding: 0 10px;
-  /*英語がはみ出るので見えるように余白追記*/
 }
 
 .slide-in_inner {
@@ -2124,6 +2196,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 .slideAnimeRightLeft {
   -webkit-animation-name: slideText100;
           animation-name: slideText100;
@@ -2163,6 +2236,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 /*========= 8-9 テキストがじわっと出現 ===============*/
 .blur {
   -webkit-animation-name: blurAnime;
@@ -2206,6 +2280,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 .blurTrigger {
   opacity: 0;
 }
@@ -2249,6 +2324,7 @@ body.appear #wrapper {
     text-shadow: 0 0 0 #fff, 0 0 0 #fff;
   }
 }
+
 /*==================================================
    7 画像リンクの動き
 ===================================*/
@@ -2267,7 +2343,7 @@ span.mask {
 
 .circle span.mask::before {
   position: absolute;
-  content: "";
+  content: '';
   -webkit-transform: scale(0);
           transform: scale(0);
   /*円の大きさ初期値は0*/
@@ -2323,6 +2399,7 @@ span.mask {
     /*アニメーションで大きくなった2倍の円の指定*/
   }
 }
+
 /* 7-11 背景が出現＋テキスト（上から） */
 .bgDU,
 .bgDU .mask {
@@ -2333,7 +2410,7 @@ span.mask {
 }
 
 .bgDU .mask::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 2;
   left: 0;
@@ -2419,7 +2496,102 @@ span.mask {
   /*#header-imgよりも配置を上にするためにrelativeをつける*/
   z-index: 3;
   /*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
-  background: #f8f9fa;
+  background: #fffdf9;
+}
+
+/*==================================================
+  独自scss
+===================================*/
+.header-logo {
+  display: block;
+  width: 100px;
+}
+
+.toppage-title-block {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.toppage-title {
+  width: 300px;
+}
+
+.top_menu-wrapper {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+  display: block;
+}
+
+.top_menu-img {
+  width: 100%;
+  height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.top_menu-img:hover {
+  opacity: 0.8;
+}
+
+.top_menu-title-block {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  width: 425px;
+  height: 280px;
+  background-color: rgba(255, 255, 255, 0.845);
+  padding: 40px 0;
+}
+
+.top_menu-title-header {
+  font-size: 28px;
+  color: #87775c;
+}
+
+.top_menu-title {
+  font-size: 32px;
+}
+
+.top_menu-title-note {
+  font-size: 20px;
+  color: #8ea362;
+}
+
+.top_menu-title-view {
+  position: relative;
+  text-align: left;
+  padding-left: 150px;
+  margin-top: 20px;
+}
+
+.top_menu-title-view::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100px;
+  background-image: url(../img/icon_arrow-bk.svg);
+  width: 110px;
+  height: 20px;
+}
+
+.top_menu1-frame {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  width: 425px;
+  height: 280px;
+}
+
+#contact {
+  text-align: center;
 }
 
 /*<!--機能編　6-1-6 複数画像を並列に見せる--> */
@@ -2427,13 +2599,15 @@ span.mask {
 .slick-slider {
   position: relative;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
+  -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
@@ -2473,7 +2647,7 @@ span.mask {
 .slick-track:before,
 .slick-track:after {
   display: table;
-  content: "";
+  content: '';
 }
 
 .slick-track:after {
@@ -2491,7 +2665,7 @@ span.mask {
   min-height: 1px;
 }
 
-[dir=rtl] .slick-slide {
+[dir='rtl'] .slick-slide {
   float: right;
 }
 
@@ -2523,4 +2697,5 @@ span.mask {
 
 .slick-arrow.slick-hidden {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
