@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* レイアウトのためのCSS */
 body {
-  background: #fffcf1;
+  background: $col_base;
   font-family: 'Noto Serif JP', serif;
   color: #555;
   font-size: 1rem;
@@ -507,10 +507,6 @@ h1,
 .page-body {
   width: 100%;
   padding-bottom: 100px;
-}
-
-body {
-  background-color: skyblue;
 }
 
 .page-header-block {
