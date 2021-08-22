@@ -647,7 +647,6 @@ h1,
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 70px;
 }
 
 @media screen and (max-width: 940px) {
@@ -857,10 +856,6 @@ h1,
 }
 
 /* blog */
-#blog {
-  margin: 0 0 50px 0;
-}
-
 .blog-area {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2515,7 +2510,6 @@ span.mask {
 
 .toppage-title {
   width: 300px;
-  margin-bottom: 50px;
 }
 
 .top_menu-wrapper {
