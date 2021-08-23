@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*
+// 大きなサイズで読み込み
+@mixin mq-l {
+    @media (min-width: $large-width) {
+        @content;
+    }
+}
+*/
 /*===========================================================*/
 /* 機能編 4-1-1数字カウントアップ*/
 /*===========================================================*/
@@ -618,7 +626,7 @@ h1,
 #blog h2,
 #footer dl dd,
 #splash-logo {
-  font-family: 'Parisienne', cursive;
+  font-family: 'Shippori Mincho B1', serif;
 }
 
 /* heading */
@@ -665,12 +673,24 @@ h1,
 /* header */
 .header-area {
   position: fixed;
-  left: 8%;
-  top: 8%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
+}
+
+@media (min-width: 720px) {
+  .header-area {
+    left: 8%;
+    top: 8%;
+  }
+}
+
+@media (max-width: 719px) {
+  .header-area {
+    left: calc(100vw * (40 / 320));
+    top: calc(100vw * (40 / 320));
+  }
 }
 
 .header-area h1 {
@@ -793,19 +813,47 @@ h1,
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   width: 100%;
-  padding-top: 50px;
 }
 
-.toppage-contactimg {
-  width: 50%;
-  min-height: 300px;
+@media (min-width: 720px) {
+  #contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 719px) {
+  #contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: calc(100vw * (50 / 320));
+  }
+}
+
+.toppage-contact-img {
   background-size: cover;
+}
+
+@media (min-width: 720px) {
+  .toppage-contact-img {
+    width: 50%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .toppage-contact-img {
+    width: 100%;
+    height: calc(100vw * (220 / 320));
+  }
 }
 
 #contact .contact-area {
@@ -1068,6 +1116,38 @@ h1,
           justify-content: space-between;
 }
 
+.footer-site-title {
+  letter-spacing: 0.2rem;
+}
+
+@media (min-width: 720px) {
+  .footer-site-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 719px) {
+  .footer-site-title {
+    font-size: calc(100vw * (16 / 320));
+  }
+}
+
+.footer-site-title-note {
+  letter-spacing: 0.2rem;
+}
+
+@media (min-width: 720px) {
+  .footer-site-title-note {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 719px) {
+  .footer-site-title-note {
+    font-size: calc(100vw * (8 / 320));
+  }
+}
+
 #footer dl {
   width: 30%;
 }
@@ -1150,14 +1230,6 @@ h1,
   text-align: center;
 }
 
-/*
-// 大きなサイズで読み込み
-@mixin mq-l {
-    @media (min-width: $large-width) {
-        @content;
-    }
-}
-*/
 /* Noto Serif JP */
 .font-noto {
   font-family: 'Noto Serif JP', serif;
@@ -2582,7 +2654,18 @@ span.mask {
 ===================================*/
 .header-logo {
   display: block;
-  width: 100px;
+}
+
+@media (min-width: 720px) {
+  .header-logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 719px) {
+  .header-logo {
+    width: calc(100vw * (60 / 320));
+  }
 }
 
 .toppage-title-block {
@@ -2636,6 +2719,12 @@ span.mask {
 @media (min-width: 720px) {
   .toppage_menu-wrapper {
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 719px) {
+  .toppage_menu-wrapper {
+    margin-bottom: calc(100vw * (10 / 320));
   }
 }
 
@@ -2906,6 +2995,19 @@ span.mask {
 
 #contact {
   text-align: center;
+}
+
+@media (min-width: 720px) {
+  .toppage-contact-header {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 719px) {
+  .toppage-contact-header {
+    font-size: calc(100vw * (14 / 320));
+    margin-top: calc(100vw * (20 / 320));
+  }
 }
 
 /*<!--機能編　6-1-6 複数画像を並列に見せる--> */

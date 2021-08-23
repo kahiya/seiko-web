@@ -858,7 +858,14 @@ span.mask {
 ===================================*/
 .header-logo {
   display: block;
-  width: 100px;
+
+  @include mq-d {
+    width: 100px;
+  }
+
+  @include mq-m {
+    width: size-m(60);
+  }
 }
 
 .toppage-title-block {
@@ -905,6 +912,10 @@ span.mask {
 
   @include mq-d {
     margin-bottom: 50px;
+  }
+
+  @include mq-m {
+    margin-bottom: size-m(10);
   }
 }
 
@@ -1156,4 +1167,15 @@ span.mask {
 // contact 部分 -----------------------------------------
 #contact {
   text-align: center;
+}
+
+.toppage-contact-header {
+  @include mq-d {
+    font-size: 1.4rem;
+  }
+
+  @include mq-m {
+    font-size: size-m(14);
+    margin-top: size-m(20);
+  }
 }

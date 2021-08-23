@@ -44,7 +44,7 @@ h1,
 #blog h2,
 #footer dl dd,
 #splash-logo {
-  font-family: 'Parisienne', cursive;
+  font-family: 'Shippori Mincho B1', serif;
 }
 
 /* heading */
@@ -94,11 +94,19 @@ h1,
 
 .header-area {
   position: fixed;
-  left: 8%;
-  top: 8%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
+
+  @include mq-d {
+    left: 8%;
+    top: 8%;
+  }
+
+  @include mq-m {
+    left: size-m(40);
+    top: size-m(40);
+  }
 }
 
 .header-area h1 {
@@ -202,15 +210,31 @@ h1,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row-reverse;
   width: 100%;
-  padding-top: 50px;
+
+  @include mq-d {
+    flex-direction: row-reverse;
+    padding-top: 50px;
+  }
+
+  @include mq-m {
+    flex-direction: column;
+    padding-top: size-m(50);
+  }
 }
 
-.toppage-contactimg {
-  width: 50%;
-  min-height: 300px;
+.toppage-contact-img {
   background-size: cover;
+
+  @include mq-d {
+    width: 50%;
+    min-height: 300px;
+  }
+
+  @include mq-m {
+    width: 100%;
+    height: size-m(220);
+  }
 }
 
 #contact .contact-area {
@@ -437,6 +461,30 @@ h1,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer-site-title {
+  letter-spacing: 0.2rem;
+
+  @include mq-d {
+    font-size: 22px;
+  }
+
+  @include mq-m {
+    font-size: size-m(16);
+  }
+}
+
+.footer-site-title-note {
+  letter-spacing: 0.2rem;
+
+  @include mq-d {
+    font-size: 16px;
+  }
+
+  @include mq-m {
+    font-size: size-m(8);
+  }
 }
 
 #footer dl {
