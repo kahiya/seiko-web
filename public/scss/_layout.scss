@@ -454,6 +454,15 @@ h1,
 /* footer */
 #footer {
   border-top: 1px solid #ccc;
+
+  @include mq-d {
+    padding: 30px 0;
+  }
+
+  @include mq-m {
+    padding-top: size-m(20);
+    padding-bottom: size-m(20);
+  }
 }
 
 #footer-inner {
@@ -461,13 +470,22 @@ h1,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
+
+  @include mq-d {
+    width: 1000px;
+  }
+
+  @include mq-m {
+    width: 80%;
+  }
 }
 
 .footer-site-title {
   letter-spacing: 0.2rem;
 
   @include mq-d {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   @include mq-m {
@@ -479,7 +497,7 @@ h1,
   letter-spacing: 0.2rem;
 
   @include mq-d {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   @include mq-m {
@@ -493,10 +511,6 @@ h1,
 
 #footer dl dt {
   font-size: 0.8rem;
-}
-
-#footer dl dd {
-  font-size: 2rem;
 }
 
 @media screen and (max-width: 900px) {
