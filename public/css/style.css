@@ -1400,7 +1400,6 @@ h1,
 #top_about .top_about-area h2 {
   width: 10%;
   line-height: 2.5;
-  font-size: 1.4rem;
 }
 
 #top_about .top_about-area .top_about-btn {
@@ -1491,9 +1490,20 @@ h1,
 #splash-logo {
   position: absolute;
   top: 50%;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (min-width: 720px) {
+  #splash-logo {
+    left: 50%;
+  }
+}
+
+@media (max-width: 719px) {
+  #splash-logo {
+    left: 48%;
+  }
 }
 
 /*========= 画面遷移のためのCSS ===============*/
@@ -2607,7 +2617,7 @@ span.mask {
 
 @media (max-width: 719px) {
   #header {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -2636,7 +2646,7 @@ span.mask {
 
 @media (max-width: 719px) {
   #header-img {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -2652,6 +2662,18 @@ span.mask {
 /*==================================================
   独自scss
 ===================================*/
+@media (min-width: 720px) {
+  .topppage-intro-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 719px) {
+  .topppage-intro-text {
+    font-size: calc(100vw * (16 / 320));
+  }
+}
+
 .header-logo {
   display: block;
 }

@@ -17,8 +17,15 @@
 #splash-logo {
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
+
+  @include mq-d {
+    left: 50%;
+  }
+
+  @include mq-m {
+    left: 48%;
+  }
 }
 
 /*========= 画面遷移のためのCSS ===============*/
@@ -823,7 +830,7 @@ span.mask {
   }
 
   @include mq-m {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -842,7 +849,7 @@ span.mask {
   }
 
   @include mq-m {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -856,6 +863,16 @@ span.mask {
 /*==================================================
   独自scss
 ===================================*/
+.topppage-intro-text {
+  @include mq-d {
+    font-size: 28px;
+  }
+
+  @include mq-m {
+    font-size: size-m(16);
+  }
+}
+
 .header-logo {
   display: block;
 
