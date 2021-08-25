@@ -787,8 +787,8 @@ h1,
 
 #menu .menu-area {
   padding: 20px;
-  -webkit-box-shadow: 5px 0 10px #ccc;
-          box-shadow: 5px 0 10px #ccc;
+  -webkit-box-shadow: 5px 0 10px rgba(204, 204, 204, 0.605);
+          box-shadow: 5px 0 10px rgba(204, 204, 204, 0.605);
 }
 
 #menu .menu-btn {
@@ -2145,8 +2145,19 @@ body.appear #wrapper {
 ===================================*/
 .slider {
   /*横幅94%で左右に余白を持たせて中央寄せ*/
-  width: 94%;
   margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .slider {
+    width: 94%;
+  }
+}
+
+@media (max-width: 719px) {
+  .slider {
+    width: 90%;
+  }
 }
 
 .slider img {
@@ -2225,12 +2236,12 @@ body.appear #wrapper {
 /*==================================================
    印象編 4 最低限おぼえておきたい動き
 ===================================*/
-/* 4-1 ふわっ（その場で） */
-.fadeIn {
+/*  ゆっくりフェードイン */
+.fadeIn-slow {
   -webkit-animation-name: fadeInAnime;
           animation-name: fadeInAnime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
   /*ゆっくり出現するため数値変更*/
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -2244,6 +2255,27 @@ body.appear #wrapper {
   to {
     opacity: 1;
   }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*  普通のフェードイン */
+.fadeIn-nomal {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /*ゆっくり出現するため数値変更*/
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 @keyframes fadeInAnime {
@@ -2669,7 +2701,7 @@ span.mask {
 
 @media (max-width: 719px) {
   #header-img {
-    height: 70vh;
+    height: 100vh;
   }
 }
 

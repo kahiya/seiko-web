@@ -501,8 +501,15 @@ body.appear #wrapper {
 ===================================*/
 .slider {
   /*横幅94%で左右に余白を持たせて中央寄せ*/
-  width: 94%;
   margin: 0 auto;
+
+  @include mq-d {
+    width: 94%;
+  }
+
+  @include mq-m {
+    width: 90%;
+  }
 }
 
 .slider img {
@@ -573,8 +580,26 @@ body.appear #wrapper {
    印象編 4 最低限おぼえておきたい動き
 ===================================*/
 
-/* 4-1 ふわっ（その場で） */
-.fadeIn {
+/*  ゆっくりフェードイン */
+.fadeIn-slow {
+  animation-name: fadeInAnime;
+  animation-duration: 10s; /*ゆっくり出現するため数値変更*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*  普通のフェードイン */
+.fadeIn-nomal {
   animation-name: fadeInAnime;
   animation-duration: 2s; /*ゆっくり出現するため数値変更*/
   animation-fill-mode: forwards;
@@ -590,6 +615,7 @@ body.appear #wrapper {
     opacity: 1;
   }
 }
+
 /* 4-4 ボンッ（拡大） */
 .zoomOut {
   animation-name: zoomOutAnime;
@@ -830,7 +856,7 @@ span.mask {
   }
 
   @include mq-m {
-    height: 70vh;
+    height: 100vh;
   }
 }
 
@@ -850,7 +876,7 @@ span.mask {
   }
 
   @include mq-m {
-    height: 70vh;
+    height: 100vh;
   }
 }
 

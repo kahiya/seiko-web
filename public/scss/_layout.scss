@@ -78,7 +78,8 @@ h1,
 
 @media screen and (max-width: 940px) {
   .inner {
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -195,7 +196,7 @@ h1,
 
 #menu .menu-area {
   padding: 20px;
-  box-shadow: 5px 0 10px #ccc;
+  box-shadow: 5px 0 10px rgba(204, 204, 204, 0.605);
 }
 
 #menu .menu-btn {
