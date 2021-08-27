@@ -104,25 +104,24 @@ $('.slider').slick({
 /*===========================================================*/
 
 // ゆっくりフェードイン
-function fadeAnimeSlow() {
-  // 4-1 ふわっ（その場で）
-  $(document).ready(function () {
-    $('fadeInTriggerSlow').fadeIn(2000, function () {});
-  });
 
-  // 4-4 ボンッ（拡大）
-  $('.zoomOutTrigger').each(function () {
-    //zoomOutTriggerというクラス名が
-    var elemPos = $(this).offset().top; //要素上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass('zoomOut'); // 画面内に入ったらzoomOutというクラス名を追記
-    } else {
-      $(this).removeClass('zoomOut'); // 画面外に出たらzoomOutというクラス名を外す
-    }
-  });
-}
+// 4-1 ふわっ（その場で）
+$(document).ready(function () {
+  $('.fadeInTriggerSlow').fadeIn(2000, function () {});
+});
+
+// 4-4 ボンッ（拡大）
+$('.zoomOutTrigger').each(function () {
+  //zoomOutTriggerというクラス名が
+  var elemPos = $(this).offset().top; //要素上の
+  var scroll = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  if (scroll >= elemPos - windowHeight) {
+    $(this).addClass('zoomOut'); // 画面内に入ったらzoomOutというクラス名を追記
+  } else {
+    $(this).removeClass('zoomOut'); // 画面外に出たらzoomOutというクラス名を外す
+  }
+});
 
 // 普通のフェードイン
 function fadeAnime() {
@@ -248,8 +247,7 @@ $(window).scroll(function () {
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-  setFadeElement(); //機能編  8-1-4ページ内にある指定の範囲内で下から出現の関数を呼ぶ
-  fadeAnimeSlow(); // 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
+  setFadeElement(); //機能編  8-1-4ページ内にある指定の範囲内で下から出現の関数を呼ぶ // 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
   fadeAnime(); // 印象編 4 最低限おぼえておきたい動きの関数を呼ぶ
   slideAnime(); // 印象編 8-2 テキストが流れるように出現（左から右）の関数を呼ぶ
   GlowAnimeControl(); //印象編 8-17 テキストがほのかに光りながら出現の関数を呼ぶ
