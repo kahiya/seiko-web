@@ -858,7 +858,7 @@ span.mask {
 }
 
 #container,
-#footer {
+/*#footer*/ {
   position: relative; /*#header-imgよりも配置を上にするためにrelativeをつける*/
   z-index: 3; /*#header-imgよりもz-indexの値を大きな数値にして上に表示*/
   background: #fffdf9;

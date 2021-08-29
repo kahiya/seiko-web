@@ -2668,8 +2668,7 @@ span.mask {
   }
 }
 
-#container,
-#footer {
+#container {
   position: relative;
   /*#header-imgよりも配置を上にするためにrelativeをつける*/
   z-index: 3;
@@ -3173,58 +3172,90 @@ span.mask {
   display: none;
 }
 
-.header {
-  position: relative;
-  /*背景を設定するdivの基点とするためrelativeをかける*/
-  width: 100%;
+html {
+  height: 100%;
   overflow: hidden;
 }
 
+.wrapper {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.page-header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 40vw;
+  padding: 30vw 0 5vw;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
+}
+
 @media (min-width: 720px) {
-  .header {
+  .page-header {
     height: 60vh;
   }
 }
 
 @media (max-width: 719px) {
-  .header {
+  .page-header {
     height: 100vh;
   }
 }
 
-.header-img-menu2 {
-  position: fixed;
-  /*背景を固定するためfixedをかける*/
-  z-index: 1;
-  /*#container,#footerよりも下に配置するために数値を小さくする*/
+.page-header,
+.page-header:before {
+  background: 50% 50% / cover;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
   top: 0;
-  /*topの位置がJSで変化*/
-  /*以下画面で背景画像を表示させるための指定*/
-  width: 100%;
-  background: url("../img/01.jpg") no-repeat top center;
-  /*背景画像の設定*/
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: skyblue;
+  background-image: url("../img/01.jpg");
   background-size: cover;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  /*変化する基点を中心からに設定*/
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.page-header * {
+  font-weight: normal;
+  letter-spacing: 0.2em;
   text-align: center;
+  margin: 0;
+  padding: 1em 0;
 }
 
-@media (min-width: 720px) {
-  .header-img-menu2 {
-    height: 60vh;
-  }
-}
-
-@media (max-width: 719px) {
-  .header-img-menu2 {
-    height: 100vh;
-  }
+.page-header-subutitle {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .page-block {
   display: block;
   margin-bottom: 100px;
+}
+
+.page-container {
+  height: 100%;
 }
 
 .intro {
@@ -3234,24 +3265,32 @@ span.mask {
 
 .intro-lead-note {
   height: 300px;
+  color: #6d5c49;
+}
+
+.intro-note {
+  color: #6d5c49;
 }
 
 .intro-inner {
   position: relative;
   margin-bottom: 200px;
   display: block;
-  height: 500px;
+  height: 750px;
 }
 
 .intro-text-block {
   background-color: #fff;
-  padding: 50px;
+  padding: 50px 100px;
   text-align: left;
   vertical-align: middle;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  position: absolute;
   z-index: 122;
+  height: 250px;
+  vertical-align: middle;
 }
 
 .intro-img1 {
@@ -3266,13 +3305,134 @@ span.mask {
 .right {
   position: absolute;
   right: 0;
-  z-index: 100;
+  top: 300px;
 }
 
 .left {
   position: absolute;
+  left: 200px;
+  top: 200px;
+}
+
+.menu {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 720px) {
+  .menu-page-title {
+    margin-bottom: 100px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .menu-page-title {
+    width: calc(100vw * (180 / 320));
+  }
+}
+
+.menupage_menu {
+  position: relative;
+}
+
+@media (min-width: 720px) {
+  .menupage_menu {
+    height: 700px;
+    margin-bottom: 50px;
+  }
+}
+
+.price-right, .price-left {
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 100;
+}
+
+.price-right {
+  right: 0;
+}
+
+.price-left {
   left: 0;
-  top: 300px;
-  z-index: 200;
+}
+
+.menupage_menu-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.menupage_menu-img {
+  height: 100%;
+}
+
+.menupage_menu-title-block {
+  position: absolute;
+  padding: 100px;
+  z-index: 400;
+}
+
+.menupage_menu-title-block p {
+  color: #6d5c49;
+}
+
+.menupage_price-frame-right, .menupage_price-frame-left {
+  position: absolute;
+  top: 0;
+  width: 48%;
+  z-index: 300;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+.menupage_price-frame-right {
+  right: 0;
+}
+
+.menupage_price-frame-left {
+  left: 0;
+}
+
+.menupage_price-frame-right {
+  right: 0;
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-title-header {
+    font-size: 24px;
+  }
+}
+
+.menupage_menu-title {
+  width: 100%;
+  border-bottom: 1px solid #6d5c49;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-title-price {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-time {
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-time {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

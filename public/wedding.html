@@ -14,13 +14,11 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header-area">
-          <a href="index.html" class="header-logo">
-            <img src="img/logo.svg" alt="" />
-          </a>
-        </div>
-        <div class="header-img-menu2"></div>
+      <header class="page-header">
+        <h1 class="page-header-title">Parallax header</h1>
+        <p class="page-header-subtitle">
+          Parallax scroll effect like Twitter. Pure css, javacsript free.
+        </p>
       </header>
 
       <div class="openbtn"><span></span><span></span><span></span></div>
@@ -39,74 +37,103 @@
         </div>
       </nav>
 
-      <main id="container" class="">
-        <div class="page-body intro">
-          <div class="intro-lead-note">
-            <span>さんぷるてきすとさんぷるてきすとさんぷるてきすと</span>
-          </div>
-          <div class="page-block">
-            <article class="intro-inner">
-              <div class="intro-img1 right fadeInTriggerNomal">
-                <img src="img/01.jpg" alt="" />
-              </div>
-              <div class="intro-text-block left fadeInTriggerNomal">
-                <span class="intro-note">
-                  サンプルテキストサンプルテキスト<br />サンプルテキストサンプルテキスト
-                </span>
-              </div>
-            </article>
-          </div>
-          <div class="page-block">
-            <article class="intro-inner">
-              <div class="intro-img1 right fadeInTriggerNomal">
-                <img src="img/01.jpg" alt="" />
-              </div>
-              <div class="intro-text-block left fadeInTriggerNomal">
-                <span class="intro-note">
-                  サンプルテキストサンプルテキスト<br />サンプルテキストサンプルテキスト
-                </span>
-              </div>
-            </article>
+      <main id="container" class="page-container">
+        <div class="page-body">
+          <div class="intro-lead-note intro fadein-up">
+            <span></span>さんぷるてきすとさんぷるてきすとさんぷるてきすと</span>
           </div>
 
-          <article class="intro-inner">
-            <div class="intro-img1 right fadeInTriggerNomal">
+      <!-- img01 ----------------------------------------->
+          <div class="page-block fadein-up">
+            <article class="intro-inner">
+              <div class="intro-img1 right">
+                <img src="img/01.jpg" alt="" />
+              </div>
+              <div class="intro-text-block left">
+                <span class="intro-note">
+                  サンプルテキストサンプルテキスト<br />サンプルテキストサンプルテキスト
+                </span>
+              </div>
+            </article>
+          </div>
+      <!-- img02 ----------------------------------------->
+      <div class="page-block fadein-up">
+            <article class="intro-inner">
+              <div class="intro-img1 left">
+                <img src="img/01.jpg" alt="" />
+              </div>
+              <div class="intro-text-block right">
+                <span class="intro-note">
+                  サンプルテキストサンプルテキスト<br />サンプルテキストサンプルテキスト
+                </span>
+              </div>
+            </article>
+          </div>
+      <!-- img03 ----------------------------------------->
+      <div class="page-block fadein-up">
+
+          <article class="intro-inner fadein-up">
+            <div class="intro-img1 right">
               <img src="img/01.jpg" alt="" />
             </div>
-            <div class="intro-text-block left fadeInTriggerNomal">
+            <div class="intro-text-block left">
               <span class="intro-note">
                 サンプルテキストサンプルテキスト<br />サンプルテキストサンプルテキスト
               </span>
             </div>
           </article>
+          </div>
+<!-- price-block ------------------------------------->
+          <section id="menu" class="menu">
+            <span class="menu-title-block fadein-up">
+              <img
+                src="img/menupage-title-price.svg"
+                class="menu-page-title"
+                alt=""
+              />
+            </span>
 
-          <section id="menu">
-            <a href="/public/menu1.html" class="toppage_menu">
-              <div class="fadeInTriggerNomal toppage_menu-wrapper">
-                <img src="img/top_menu_1.jpg" class="toppage_menu-img" alt="" />
-                <div class="toppage_menu-title-block menu-right"></div>
-                <img src="img/top_menu_1-frame.svg" class="toppage_menu1-frame" alt="" />
-              </div>
-            </a>
-            <a href="/public/menu2.html" class="toppage_menu">
-              <div class="fadeInTriggerNomal toppage_menu-wrapper">
-                <img src="img/top_menu_2.png" class="toppage_menu-img" alt="" />
-                <div class="toppage_menu-title-block menu-left">
-                  <p class="toppage_menu-title-header">Menu</p>
-                  <p class="toppage_menu-title">普段の装い</p>
-                  <p class="toppage_menu-title-note">日常を愉しむ日本髪</p>
-                  <p class="toppage_menu-title-view fadeInTriggerNomal">view</p>
+            <div href="/public/menu1.html" class="menupage_menu fadein-up">
+              <div class="fadeInTriggerNomal menupage_menu-wrapper">
+                <img src="img/top_menu_1.jpg" class="menupage_menu-img" alt="" />
+                <div class="menupage_menu-title-block price-right">
+                  <p class="menupage_menu-title-header">plan</p>
+                  <p class="menupage_menu-title">地毛結い</p>
+                  <p class="menupage_menu-title-price">18,000[税込]〜</p>
+                  <p class="menupage_menu-time">髪結い所用時間 : 1時間</p>
+                  <p class="menupage_menu-note">お客様ご自身のお髪を使って
+                    結い上げる日本古来の手法です。
+                    髪型については色々種類もございますが、お客様の髪の長さによって結い上げ
+                    可能かが左右されますのでご依頼の際に
+                    お尋ねください。</p>
                 </div>
-                <img src="img/top_menu_1-frame.svg" class="toppage_menu2-frame" alt="" />
+                <img src="img/menu-price-y.svg" class="menupage_price-frame-right" alt="" />                
               </div>
-            </a>
+            </div>
+            <div href="/public/menu2.html" class="menupage_menu">
+              <div class="fadeInTriggerNomal menupage_menu-wrapper">
+                <img src="img/top_menu_2.png" class="menupage_menu-img" alt="" />
+                <div class="menupage_menu-title-block price-left">
+                  <p class="menupage_menu-title-header">plan</p>
+                  <p class="menupage_menu-title">半かつら結い</p>
+                  <p class="menupage_menu-title-price">15,000[税込]〜</p>
+                  <p class="menupage_menu-time">髪結い所用時間 : 20分</p>
+                  <p class="menupage_menu-note">生え際の髪の毛のみを生かして
+                    結い上げます。
+                    映画や時代劇などで女優さんがされる手法と同じやり方で結い上げますので、とても自然な仕上がりになります。
+                    髪の毛の短い方や、結い上げの負担を少なくされたい方にお勧めです。</p>
+                </div>
+                <img src="img/menu-price-bl.svg" class="menupage_price-frame-left" alt="" />                
+
+              </div>
+            </div>
           </section>
 
           <article id="blog" class="inner">
             <span class="slide-in leftAnime toppage-title-block">
               <img
                 src="img/toppage-title_contact.svg"
-                class="toppage-title slide-in_inner leftAnimeInner fadeInTriggerNomal"
+                class="toppage-title slide-in_inner leftAnimeInner"
                 alt=""
               />
             </span>
@@ -115,52 +142,51 @@
         </div>
         <!--/container-->
       </main>
-<!--
-      <footer id="footer">
-        <div id="footer-inner">
-          <dl>
-            <dd>
-              <span class="slide-in leftAnime"
-                ><span class="slide-in_inner leftAnimeInner font-noto footer-site-title"
-                  >セイコ髪結店</span
-                ></span
-              >
-            </dd>
-            <dd>
-              <span class="slide-in leftAnime"
-                ><span class="slide-in_inner leftAnimeInner font-noto footer-site-title-note"
-                  >提携先美容院:Domino for Hair</span
-                >
-              </span>
-            </dd>
-          </dl>
-          <div class="footer-list">
-            <div class="slide-in leftAnime">
-              <div class="slide-in_inner leftAnimeInner">
-                <ul>
-                  <li><a href="#">Top</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Menu</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Blog</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>-->
-          <!--/footer-list-->
-        </div>
-        <p id="page-top" class="hide-btn">
-          <a href="#"><span></span></a>
-        </p>
-        <small
-          ><span class="slide-in leftAnime"
-            ><span class="slide-in_inner leftAnimeInner">&copy; Beautiful days</span></span
-          ></small
-        >
-      </footer>
+
       <!--/wrapper-->
     </div>
-
+    <footer id="footer">
+      <div id="footer-inner">
+        <dl>
+          <dd>
+            <span class="slide-in leftAnime"
+              ><span class="slide-in_inner leftAnimeInner font-noto footer-site-title"
+                >セイコ髪結店</span
+              ></span
+            >
+          </dd>
+          <dd>
+            <span class="slide-in leftAnime"
+              ><span class="slide-in_inner leftAnimeInner font-noto footer-site-title-note"
+                >提携先美容院:Domino for Hair</span
+              >
+            </span>
+          </dd>
+        </dl>
+        <div class="footer-list">
+          <div class="slide-in leftAnime">
+            <div class="slide-in_inner leftAnimeInner">
+              <ul>
+                <li><a href="#">Top</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--/footer-list-->
+      </div>
+      <p id="page-top" class="hide-btn">
+        <a href="#"><span></span></a>
+      </p>
+      <small
+        ><span class="slide-in leftAnime"
+          ><span class="slide-in_inner leftAnimeInner">&copy; Beautiful days</span></span
+        ></small
+      >
+    </footer>
     <!--=============JS ===============-->
     <!--jQuery-->
     <script
@@ -171,6 +197,7 @@
     <!--機能編　6-1-6 複数画像を並列に見せる-->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--自作のJS-->
-    <script src="js/top-script.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/menu-script.js"></script>
   </body>
 </html>

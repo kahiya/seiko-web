@@ -1,7 +1,29 @@
-.header {
-  position: relative; /*背景を設定するdivの基点とするためrelativeをかける*/
-  width: 100%;
+html {
+  height: 100%;
   overflow: hidden;
+}
+
+.wrapper {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.page-header {
+  box-sizing: border-box;
+  min-height: 40vw;
+  padding: 30vw 0 5vw;
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  width: 100vw;
 
   @include mq-d {
     height: 60vh;
@@ -11,30 +33,49 @@
     height: 100vh;
   }
 }
+.page-header,
+.page-header:before {
+  background: 50% 50% / cover;
+}
 
-.header-img-menu2 {
-  position: fixed; /*背景を固定するためfixedをかける*/
-  z-index: 1; /*#container,#footerよりも下に配置するために数値を小さくする*/
-  top: 0; /*topの位置がJSで変化*/
-  /*以下画面で背景画像を表示させるための指定*/
-  width: 100%;
-  background: url('../img/01.jpg') no-repeat top center; /*背景画像の設定*/
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: skyblue;
+  background-image: url('../img/01.jpg');
   background-size: cover;
-  transform-origin: center; /*変化する基点を中心からに設定*/
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.page-header * {
+  font-weight: normal;
+  letter-spacing: 0.2em;
   text-align: center;
+  margin: 0;
+  padding: 1em 0;
+}
 
-  @include mq-d {
-    height: 60vh;
-  }
-
-  @include mq-m {
-    height: 100vh;
-  }
+.page-header-subutitle {
+  background-color: hsla(0, 0%, 100%, 0.1);
 }
 
 .page-block {
   display: block;
   margin-bottom: 100px;
+}
+
+.page-container {
+  height: 100%;
 }
 
 .intro {
@@ -44,22 +85,30 @@
 
 .intro-lead-note {
   height: 300px;
+  color: $col_bk;
+}
+
+.intro-note {
+  color: $col_bk;
 }
 
 .intro-inner {
   position: relative;
   margin-bottom: 200px;
   display: block;
-  height: 500px;
+  height: 750px;
 }
 
 .intro-text-block {
   background-color: #fff;
-  padding: 50px;
+  padding: 50px 100px;
   text-align: left;
   vertical-align: middle;
   width: fit-content;
+  position: absolute;
   z-index: 122;
+  height: 250px;
+  vertical-align: middle;
 }
 
 .intro-img1 {
@@ -73,12 +122,133 @@
 .right {
   position: absolute;
   right: 0;
-  z-index: 100;
+  top: 300px;
 }
 
 .left {
   position: absolute;
+  left: 200px;
+  top: 200px;
+}
+//=======================================
+.menu {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+
+.menu-page-title {
+  @include mq-d {
+    margin-bottom: 100px;
+    width: 300px;
+  }
+
+  @include mq-m {
+    width: size-m(180);
+  }
+}
+
+.menupage_menu {
+  position: relative;
+
+  @include mq-d {
+    height: 700px;
+    margin-bottom: 50px;
+  }
+}
+
+%price {
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 100;
+}
+
+.price-right {
+  @extend %price;
+
+  right: 0;
+}
+
+.price-left {
+  @extend %price;
+
   left: 0;
-  top: 300px;
-  z-index: 200;
+}
+
+.menupage_menu-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.menupage_menu-img {
+  height: 100%;
+}
+
+.menupage_menu-title-block {
+  position: absolute;
+  padding: 100px;
+  z-index: 400;
+  p {
+    color: $col_bk;
+  }
+}
+
+%menupage_price-frame {
+  position: absolute;
+  top: 0;
+  width: 48%;
+  z-index: 300;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+.menupage_price-frame-right {
+  @extend %menupage_price-frame;
+  right: 0;
+}
+
+.menupage_price-frame-left {
+  @extend %menupage_price-frame;
+  left: 0;
+}
+
+.menupage_price-frame-right {
+  @extend %menupage_price-frame;
+  right: 0;
+}
+
+.menupage_menu-title-header {
+  @include mq-d {
+    font-size: 24px;
+  }
+}
+
+.menupage_menu-title {
+  width: 100%;
+  border-bottom: 1px solid $col_bk;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+
+  @include mq-d {
+    font-size: 32px;
+  }
+}
+
+.menupage_menu-title-price {
+  @include mq-d {
+    font-size: 24px;
+  }
+}
+
+.menupage_menu-time {
+  @include mq-d {
+    font-size: 14px;
+    margin-bottom: 60px;
+  }
+}
+
+.menupage_menu-time {
+  @include mq-d {
+    font-size: 16px;
+  }
 }
