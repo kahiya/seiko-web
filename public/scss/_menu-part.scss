@@ -1,0 +1,84 @@
+.header {
+  position: relative; /*背景を設定するdivの基点とするためrelativeをかける*/
+  width: 100%;
+  overflow: hidden;
+
+  @include mq-d {
+    height: 60vh;
+  }
+
+  @include mq-m {
+    height: 100vh;
+  }
+}
+
+.header-img-menu2 {
+  position: fixed; /*背景を固定するためfixedをかける*/
+  z-index: 1; /*#container,#footerよりも下に配置するために数値を小さくする*/
+  top: 0; /*topの位置がJSで変化*/
+  /*以下画面で背景画像を表示させるための指定*/
+  width: 100%;
+  background: url('../img/01.jpg') no-repeat top center; /*背景画像の設定*/
+  background-size: cover;
+  transform-origin: center; /*変化する基点を中心からに設定*/
+  text-align: center;
+
+  @include mq-d {
+    height: 60vh;
+  }
+
+  @include mq-m {
+    height: 100vh;
+  }
+}
+
+.page-block {
+  display: block;
+  margin-bottom: 100px;
+}
+
+.intro {
+  height: 600px;
+  padding: 50px;
+}
+
+.intro-lead-note {
+  height: 300px;
+}
+
+.intro-inner {
+  position: relative;
+  margin-bottom: 200px;
+  display: block;
+  height: 500px;
+}
+
+.intro-text-block {
+  background-color: #fff;
+  padding: 50px;
+  text-align: left;
+  vertical-align: middle;
+  width: fit-content;
+  z-index: 122;
+}
+
+.intro-img1 {
+  max-width: 800px;
+  width: 80%;
+  height: 500px;
+  object-fit: contain;
+  z-index: 102;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 300px;
+  z-index: 200;
+}

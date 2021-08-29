@@ -729,29 +729,6 @@ body.appear #wrapper {
   opacity: 0;
 }
 
-/*========= 8-17　テキストがほのかに光りながら出現 ===============*/
-
-.glowAnime span {
-  opacity: 0;
-}
-.glowAnime.glow span {
-  animation: glow_anime_on 1s ease-out forwards;
-}
-@keyframes glow_anime_on {
-  0% {
-    opacity: 0;
-    text-shadow: 0 0 0 #fff, 0 0 0 #fff;
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 10px #fff, 0 0 15px #fff;
-  }
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 0 #fff, 0 0 0 #fff;
-  }
-}
-
 /*==================================================
    7 画像リンクの動き
 ===================================*/
