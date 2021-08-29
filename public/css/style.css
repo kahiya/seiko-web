@@ -3209,7 +3209,7 @@ html {
 
 @media (max-width: 719px) {
   .page-header {
-    height: 100vh;
+    height: 80vh;
   }
 }
 
@@ -3251,7 +3251,18 @@ html {
 
 .page-block {
   display: block;
-  margin-bottom: 100px;
+}
+
+@media (min-width: 720px) {
+  .page-block {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 719px) {
+  .page-block {
+    margin-bottom: calc(100vw * (30 / 320));
+  }
 }
 
 .page-container {
@@ -3260,12 +3271,35 @@ html {
 
 .intro {
   height: 600px;
-  padding: 50px;
+}
+
+@media (min-width: 720px) {
+  .intro {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro {
+    padding: calc(100vw * (30 / 320));
+  }
 }
 
 .intro-lead-note {
-  height: 300px;
   color: #6d5c49;
+}
+
+@media (min-width: 720px) {
+  .intro-lead-note {
+    height: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro-lead-note {
+    height: calc(100vw * (100 / 320));
+    margin-bottom: calc(100vw * (50 / 320));
+  }
 }
 
 .intro-note {
@@ -3274,14 +3308,25 @@ html {
 
 .intro-inner {
   position: relative;
-  margin-bottom: 200px;
   display: block;
-  height: 750px;
+}
+
+@media (min-width: 720px) {
+  .intro-inner {
+    margin-bottom: 200px;
+    height: 750px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro-inner {
+    margin-bottom: calc(100vw * (50 / 320));
+    height: calc(100vw * (250 / 320));
+  }
 }
 
 .intro-text-block {
   background-color: #fff;
-  padding: 50px 100px;
   text-align: left;
   vertical-align: middle;
   width: -webkit-fit-content;
@@ -3289,35 +3334,100 @@ html {
   width: fit-content;
   position: absolute;
   z-index: 122;
-  height: 250px;
   vertical-align: middle;
 }
 
+@media (min-width: 720px) {
+  .intro-text-block {
+    padding: 50px 100px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro-text-block {
+    padding: calc(100vw * (10 / 320));
+    height: calc(100vw * (100 / 320));
+  }
+}
+
 .intro-img1 {
-  max-width: 800px;
   width: 80%;
-  height: 500px;
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 102;
 }
 
+@media (min-width: 720px) {
+  .intro-img1 {
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro-img1 {
+    height: calc(100vw * (250 / 320));
+  }
+}
+
 .right {
   position: absolute;
   right: 0;
-  top: 300px;
+}
+
+@media (min-width: 720px) {
+  .right {
+    top: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .right {
+    top: calc(100vw * (50 / 320));
+  }
+}
+
+.textbox-right {
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 720px) {
+  .textbox-right {
+    top: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .textbox-right {
+    bottom: 0;
+  }
 }
 
 .left {
   position: absolute;
-  left: 200px;
-  top: 200px;
+}
+
+@media (min-width: 720px) {
+  .left {
+    left: 200px;
+    top: 200px;
+  }
+}
+
+@media (max-width: 719px) {
+  .left {
+    left: 0;
+    top: 0;
+  }
 }
 
 .menu {
   max-width: 1000px;
   width: 100%;
   margin: auto;
+  text-align: center;
 }
 
 @media (min-width: 720px) {
@@ -3330,6 +3440,7 @@ html {
 @media (max-width: 719px) {
   .menu-page-title {
     width: calc(100vw * (180 / 320));
+    margin-bottom: calc(100vw * (20 / 320));
   }
 }
 
@@ -3345,10 +3456,21 @@ html {
 }
 
 .price-right, .price-left {
-  top: 0;
   height: 100%;
-  width: 50%;
   z-index: 100;
+}
+
+@media (min-width: 720px) {
+  .price-right, .price-left {
+    top: 0;
+    width: 50%;
+  }
+}
+
+@media (max-width: 719px) {
+  .price-right, .price-left {
+    width: 100%;
+  }
 }
 
 .price-right {
@@ -3364,26 +3486,62 @@ html {
   position: relative;
 }
 
-.menupage_menu-img {
-  height: 100%;
+@media (min-width: 720px) {
+  .menupage_menu-img {
+    height: 100%;
+  }
 }
 
-.menupage_menu-title-block {
+@media (max-width: 719px) {
+  .menupage_menu-img {
+    height: calc(100vw * (500 / 320));
+  }
+}
+
+.menupage_price-block {
   position: absolute;
-  padding: 100px;
   z-index: 400;
 }
 
-.menupage_menu-title-block p {
+.menupage_price-block p {
   color: #6d5c49;
 }
 
+@media (min-width: 720px) {
+  .menupage_price-block {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 719px) {
+  .menupage_price-block {
+    padding-top: calc(100vw * (10 / 320));
+    padding-bottom: calc(100vw * (10 / 320));
+    padding-left: calc(100vw * (40 / 320));
+    padding-right: calc(100vw * (40 / 320));
+  }
+}
+
 .menupage_price-frame-right, .menupage_price-frame-left {
-  position: absolute;
-  top: 0;
-  width: 48%;
-  z-index: 300;
   background-color: rgba(255, 255, 255, 0.93);
+}
+
+@media (min-width: 720px) {
+  .menupage_price-frame-right, .menupage_price-frame-left {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    width: 48%;
+  }
+}
+
+@media (max-width: 719px) {
+  .menupage_price-frame-right, .menupage_price-frame-left {
+    width: calc(100vw * (290 / 320));
+    bottom: calc(100vw * (0 / 320));
+    margin-top: calc(100vw * (-50 / 320));
+    margin-bottom: calc(100vw * (30 / 320));
+  }
 }
 
 .menupage_price-frame-right {
@@ -3399,27 +3557,47 @@ html {
 }
 
 @media (min-width: 720px) {
-  .menupage_menu-title-header {
+  .menupage_price-header {
     font-size: 24px;
   }
 }
 
-.menupage_menu-title {
+@media (max-width: 719px) {
+  .menupage_price-header {
+    font-size: calc(100vw * (10 / 320));
+  }
+}
+
+.menupage_price {
   width: 100%;
   border-bottom: 1px solid #6d5c49;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
 }
 
 @media (min-width: 720px) {
-  .menupage_menu-title {
+  .menupage_price {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 32px;
   }
 }
 
+@media (max-width: 719px) {
+  .menupage_price {
+    margin-bottom: calc(100vw * (5 / 320));
+    font-size: calc(100vw * (16 / 320));
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: 720px) {
-  .menupage_menu-title-price {
+  .menupage_price-price {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 719px) {
+  .menupage_price-price {
+    font-size: calc(100vw * (14 / 320));
   }
 }
 
@@ -3430,9 +3608,22 @@ html {
   }
 }
 
-@media (min-width: 720px) {
+@media (max-width: 719px) {
   .menupage_menu-time {
+    font-size: calc(100vw * (11 / 320));
+    margin-bottom: calc(100vw * (30 / 320));
+  }
+}
+
+@media (min-width: 720px) {
+  .menupage_menu-note {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 719px) {
+  .menupage_menu-note {
+    font-size: calc(100vw * (10 / 320));
   }
 }
 /*# sourceMappingURL=style.css.map */

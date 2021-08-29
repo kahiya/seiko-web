@@ -30,7 +30,7 @@ html {
   }
 
   @include mq-m {
-    height: 100vh;
+    height: 80vh;
   }
 }
 .page-header,
@@ -71,7 +71,14 @@ html {
 
 .page-block {
   display: block;
-  margin-bottom: 100px;
+
+  @include mq-d {
+    margin-bottom: 100px;
+  }
+
+  @include mq-m {
+    margin-bottom: size-m(30);
+  }
 }
 
 .page-container {
@@ -80,12 +87,27 @@ html {
 
 .intro {
   height: 600px;
-  padding: 50px;
+
+  @include mq-d {
+    padding: 50px;
+  }
+
+  @include mq-m {
+    padding: size-m(30);
+  }
 }
 
 .intro-lead-note {
-  height: 300px;
   color: $col_bk;
+
+  @include mq-d {
+    height: 300px;
+  }
+
+  @include mq-m {
+    height: size-m(100);
+    margin-bottom: size-m(50);
+  }
 }
 
 .intro-note {
@@ -94,47 +116,98 @@ html {
 
 .intro-inner {
   position: relative;
-  margin-bottom: 200px;
   display: block;
-  height: 750px;
+
+  @include mq-d {
+    margin-bottom: 200px;
+    height: 750px;
+  }
+
+  @include mq-m {
+    margin-bottom: size-m(50);
+    height: size-m(250);
+  }
 }
 
 .intro-text-block {
   background-color: #fff;
-  padding: 50px 100px;
   text-align: left;
   vertical-align: middle;
   width: fit-content;
   position: absolute;
   z-index: 122;
-  height: 250px;
   vertical-align: middle;
+
+  @include mq-d {
+    padding: 50px 100px;
+    height: 250px;
+  }
+
+  @include mq-m {
+    padding: size-m(10);
+    height: size-m(100);
+  }
 }
 
 .intro-img1 {
-  max-width: 800px;
   width: 80%;
-  height: 500px;
   object-fit: contain;
   z-index: 102;
+
+  @include mq-d {
+    max-width: 800px;
+    height: 500px;
+  }
+
+  @include mq-m {
+    height: size-m(250);
+  }
 }
 
 .right {
   position: absolute;
   right: 0;
-  top: 300px;
+
+  @include mq-d {
+    top: 300px;
+  }
+
+  @include mq-m {
+    top: size-m(50);
+  }
+}
+
+.textbox-right {
+  position: absolute;
+  right: 0;
+
+  @include mq-d {
+    top: 300px;
+  }
+
+  @include mq-m {
+    bottom: 0;
+  }
 }
 
 .left {
   position: absolute;
-  left: 200px;
-  top: 200px;
+  @include mq-d {
+    left: 200px;
+    top: 200px;
+  }
+
+  @include mq-m {
+    left: 0;
+    top: 0;
+  }
 }
 //=======================================
 .menu {
   max-width: 1000px;
   width: 100%;
   margin: auto;
+  text-align: center;
 }
 
 .menu-page-title {
@@ -145,6 +218,7 @@ html {
 
   @include mq-m {
     width: size-m(180);
+    margin-bottom: size-m(20);
   }
 }
 
@@ -158,10 +232,18 @@ html {
 }
 
 %price {
-  top: 0;
   height: 100%;
-  width: 50%;
   z-index: 100;
+
+  @include mq-d {
+    top: 0;
+    width: 50%;
+  }
+
+  @include mq-m {
+    width: 100%;
+    //bottom: size-m(-30);
+  }
 }
 
 .price-right {
@@ -182,24 +264,51 @@ html {
 }
 
 .menupage_menu-img {
-  height: 100%;
+  @include mq-d {
+    height: 100%;
+  }
+
+  @include mq-m {
+    height: size-m(500);
+  }
 }
 
-.menupage_menu-title-block {
+.menupage_price-block {
   position: absolute;
-  padding: 100px;
   z-index: 400;
+
   p {
     color: $col_bk;
+  }
+
+  @include mq-d {
+    padding: 100px;
+  }
+
+  @include mq-m {
+    padding-top: size-m(10);
+    padding-bottom: size-m(10);
+    padding-left: size-m(40);
+    padding-right: size-m(40);
   }
 }
 
 %menupage_price-frame {
-  position: absolute;
-  top: 0;
-  width: 48%;
-  z-index: 300;
   background-color: rgba(255, 255, 255, 0.93);
+
+  @include mq-d {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    width: 48%;
+  }
+
+  @include mq-m {
+    width: size-m(290);
+    bottom: size-m(0);
+    margin-top: size-m(-50);
+    margin-bottom: size-m(30);
+  }
 }
 
 .menupage_price-frame-right {
@@ -217,26 +326,40 @@ html {
   right: 0;
 }
 
-.menupage_menu-title-header {
+.menupage_price-header {
   @include mq-d {
     font-size: 24px;
   }
+
+  @include mq-m {
+    font-size: size-m(10);
+  }
 }
 
-.menupage_menu-title {
+.menupage_price {
   width: 100%;
   border-bottom: 1px solid $col_bk;
-  padding-bottom: 20px;
-  margin-bottom: 10px;
 
   @include mq-d {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 32px;
+  }
+
+  @include mq-m {
+    margin-bottom: size-m(5);
+    font-size: size-m(16);
+    padding-bottom: 0;
   }
 }
 
-.menupage_menu-title-price {
+.menupage_price-price {
   @include mq-d {
     font-size: 24px;
+  }
+
+  @include mq-m {
+    font-size: size-m(14);
   }
 }
 
@@ -245,10 +368,19 @@ html {
     font-size: 14px;
     margin-bottom: 60px;
   }
+
+  @include mq-m {
+    font-size: size-m(11);
+    margin-bottom: size-m(30);
+  }
 }
 
-.menupage_menu-time {
+.menupage_menu-note {
   @include mq-d {
     font-size: 16px;
+  }
+
+  @include mq-m {
+    font-size: size-m(10);
   }
 }
