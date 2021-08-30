@@ -470,7 +470,7 @@ img {
 
 /* font-family */
 h1,
-.g-nav-list li:nth-child(1),
+.g-nav-list,
 #menu h2,
 #blog h2,
 .footer dl dd,
@@ -1044,14 +1044,21 @@ h1,
   width: 30%;
 }
 
-.footer dl dt {
-  font-size: 0.8rem;
-}
-
-@media screen and (max-width: 900px) {
+@media (min-width: 720px) {
   .footer dl {
     margin: 50px 0;
   }
+}
+
+@media (max-width: 719px) {
+  .footer dl {
+    margin-top: calc(100vw * (20 / 320));
+    margin-bottom: calc(100vw * (20 / 320));
+  }
+}
+
+.footer dl dt {
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 768px) {

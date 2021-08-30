@@ -39,7 +39,7 @@ img {
 /* font-family */
 
 h1,
-.g-nav-list li:nth-child(1),
+.g-nav-list,
 #menu h2,
 #blog h2,
 .footer dl dd,
@@ -520,16 +520,19 @@ h1,
 
 .footer dl {
   width: 30%;
+
+  @include mq-d {
+    margin: 50px 0;
+  }
+
+  @include mq-m {
+    margin-top: size-m(20);
+    margin-bottom: size-m(20);
+  }
 }
 
 .footer dl dt {
   font-size: 0.8rem;
-}
-
-@media screen and (max-width: 900px) {
-  .footer dl {
-    margin: 50px 0;
-  }
 }
 
 @media screen and (max-width: 768px) {
