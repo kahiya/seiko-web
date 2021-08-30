@@ -473,7 +473,7 @@ h1,
 .g-nav-list li:nth-child(1),
 #menu h2,
 #blog h2,
-#footer dl dd,
+.footer dl dd,
 #splash-logo {
   font-family: 'Shippori Mincho B1', serif;
 }
@@ -957,24 +957,27 @@ h1,
 }
 
 /* footer */
-#footer {
-  border-top: 1px solid #ccc;
+.footer {
+  border-top: 1px solid #e3e3e3;
+  position: relative;
+  background-color: #fffcf1;
+  z-index: 10;
 }
 
 @media (min-width: 720px) {
-  #footer {
+  .footer {
     padding: 30px 0;
   }
 }
 
 @media (max-width: 719px) {
-  #footer {
+  .footer {
     padding-top: calc(100vw * (20 / 320));
     padding-bottom: calc(100vw * (20 / 320));
   }
 }
 
-#footer-inner {
+.footer-inner {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -994,13 +997,13 @@ h1,
 }
 
 @media (min-width: 720px) {
-  #footer-inner {
+  .footer-inner {
     width: 1000px;
   }
 }
 
 @media (max-width: 719px) {
-  #footer-inner {
+  .footer-inner {
     width: 80%;
   }
 }
@@ -1037,39 +1040,39 @@ h1,
   }
 }
 
-#footer dl {
+.footer dl {
   width: 30%;
 }
 
-#footer dl dt {
+.footer dl dt {
   font-size: 0.8rem;
 }
 
 @media screen and (max-width: 900px) {
-  #footer dl {
+  .footer dl {
     margin: 50px 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #footer dl dd {
+  .footer dl dd {
     font-size: 1.5rem;
   }
 }
 
-#footer .footer-list {
+.footer .footer-list {
   width: 65%;
   text-align: right;
 }
 
-#footer ul li {
+.footer ul li {
   display: inline-block;
   padding: 0 10px;
   font-size: 0.8rem;
   line-height: 3;
 }
 
-#footer small {
+.footer small {
   text-align: right;
   margin: 20px 0 0 0;
   display: block;
@@ -1077,7 +1080,7 @@ h1,
   font-size: 0.7rem;
 }
 
-#footer .page-top span {
+.footer .page-top span {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -1088,9 +1091,9 @@ h1,
 }
 
 @media screen and (max-width: 900px) {
-  #footer dl,
-  #footer .footer-list,
-  #footer small {
+  .footer dl,
+  .footer .footer-list,
+  .footer small {
     width: 100%;
     text-align: center;
   }
@@ -2588,7 +2591,7 @@ span.mask {
   position: fixed;
   /*背景を固定するためfixedをかける*/
   z-index: 1;
-  /*#container,#footerよりも下に配置するために数値を小さくする*/
+  /*#container,.footerよりも下に配置するために数値を小さくする*/
   top: 0;
   /*topの位置がJSで変化*/
   /*以下画面で背景画像を表示させるための指定*/
@@ -3187,7 +3190,7 @@ span.mask {
 @media (min-width: 720px) {
   .aboutpage-sub {
     max-width: 800px;
-    margin: 50px auto 200px;
+    margin: 50px auto 100px;
   }
 }
 
@@ -3313,6 +3316,18 @@ html {
 
 .page-container {
   height: 100%;
+}
+
+@media (min-width: 720px) {
+  .page-container {
+    padding-bottom: 300px;
+  }
+}
+
+@media (max-width: 719px) {
+  .page-container {
+    padding-bottom: calc(100vw * (200 / 320));
+  }
 }
 
 .intro {

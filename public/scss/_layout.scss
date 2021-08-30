@@ -42,7 +42,7 @@ h1,
 .g-nav-list li:nth-child(1),
 #menu h2,
 #blog h2,
-#footer dl dd,
+.footer dl dd,
 #splash-logo {
   font-family: 'Shippori Mincho B1', serif;
 }
@@ -462,8 +462,11 @@ h1,
 }
 
 /* footer */
-#footer {
-  border-top: 1px solid #ccc;
+.footer {
+  border-top: 1px solid rgb(227, 227, 227);
+  position: relative;
+  background-color: $col_base;
+  z-index: 10;
 
   @include mq-d {
     padding: 30px 0;
@@ -475,7 +478,7 @@ h1,
   }
 }
 
-#footer-inner {
+.footer-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -515,39 +518,39 @@ h1,
   }
 }
 
-#footer dl {
+.footer dl {
   width: 30%;
 }
 
-#footer dl dt {
+.footer dl dt {
   font-size: 0.8rem;
 }
 
 @media screen and (max-width: 900px) {
-  #footer dl {
+  .footer dl {
     margin: 50px 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #footer dl dd {
+  .footer dl dd {
     font-size: 1.5rem;
   }
 }
 
-#footer .footer-list {
+.footer .footer-list {
   width: 65%;
   text-align: right;
 }
 
-#footer ul li {
+.footer ul li {
   display: inline-block;
   padding: 0 10px;
   font-size: 0.8rem;
   line-height: 3;
 }
 
-#footer small {
+.footer small {
   text-align: right;
   margin: 20px 0 0 0;
   display: block;
@@ -555,7 +558,7 @@ h1,
   font-size: 0.7rem;
 }
 
-#footer .page-top span {
+.footer .page-top span {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -565,9 +568,9 @@ h1,
 }
 
 @media screen and (max-width: 900px) {
-  #footer dl,
-  #footer .footer-list,
-  #footer small {
+  .footer dl,
+  .footer .footer-list,
+  .footer small {
     width: 100%;
     text-align: center;
   }

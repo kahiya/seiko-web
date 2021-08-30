@@ -6,14 +6,14 @@ $('.openbtn').click(function () {
   //ボタンがクリックされた ら
   $(this).toggleClass('active'); //ボタン自身に activeクラスを付与し
   $('.g-nav').toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
-  $('#header,.page-header,#container,.container,#footer').toggleClass('mainblur'); //ぼかしたいエリアにmainblurクラスを付与
+  $('#header,.page-header,#container,.container,.footer').toggleClass('mainblur'); //ぼかしたいエリアにmainblurクラスを付与
 });
 
 $('.g-nav a').click(function () {
   //ナビゲーションのリンクがクリックされたら
   $('.openbtn').removeClass('active'); //ボタンの activeクラスを除去し
   $('.g-nav').removeClass('panelactive'); //ナビゲーションのpanelactiveクラスを除去し
-  $('#header,.page-header,#container,.container,#footer').removeClass('mainblur'); //ぼかしているエリアのmainblurクラスを除去
+  $('#header,.page-header,#container,.container,.footer').removeClass('mainblur'); //ぼかしているエリアのmainblurクラスを除去
 });
 
 /*===========================================================*/
@@ -29,8 +29,8 @@ function setFadeElement() {
   var contentsH = $('#blog').outerHeight(true); //要素の高さを取得
 
   //2つ目の出現範囲の指定※任意
-  var contentsTop2 = Math.round($('#footer').offset().top); //要素までの高さを取得
-  var contentsH2 = $('#footer').outerHeight(true); //要素の高さを取得
+  var contentsTop2 = Math.round($('.footer').offset().top); //要素までの高さを取得
+  var contentsH2 = $('.footer').outerHeight(true); //要素の高さを取得
 
   //出現範囲内に入ったかどうかをチェック
   if (scroll + windowH >= contentsTop && scroll + windowH <= contentsTop + contentsH) {

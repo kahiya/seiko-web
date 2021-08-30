@@ -84,6 +84,14 @@ html {
 
 .page-container {
   height: 100%;
+
+  @include mq-d {
+    padding-bottom: 300px;
+  }
+
+  @include mq-m {
+    padding-bottom: size-m(200);
+  }
 }
 
 .intro {
