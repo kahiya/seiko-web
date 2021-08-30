@@ -34,25 +34,25 @@ function setFadeElement() {
 
   //出現範囲内に入ったかどうかをチェック
   if (scroll + windowH >= contentsTop && scroll + windowH <= contentsTop + contentsH) {
-    $('#page-top').addClass('UpMove'); //入っていたらUpMoveをクラス追加
-    $('#page-top').removeClass('DownMove'); //DownMoveを削除
+    $('.page-top').addClass('UpMove'); //入っていたらUpMoveをクラス追加
+    $('.page-top').removeClass('DownMove'); //DownMoveを削除
     $('.hide-btn').removeClass('hide-btn'); //hide-btnを削除
   } //2つ目の出現範囲に入ったかどうかをチェック※任意
   else if (scroll + windowH >= contentsTop2 && scroll + windowH <= contentsTop2 + contentsH2) {
-    $('#page-top').addClass('UpMove'); //入っていたらUpMoveをクラス追加
-    $('#page-top').removeClass('DownMove'); //DownMoveを削除
+    $('.page-top').addClass('UpMove'); //入っていたらUpMoveをクラス追加
+    $('.page-top').removeClass('DownMove'); //DownMoveを削除
   } //それ以外は
   else {
     if (!$('.hide-btn').length) {
       //サイト表示時にDownMoveクラスを一瞬付与させないためのクラス付け。hide-btnがなければ下記の動作を行う
-      $('#page-top').addClass('DownMove'); //DownMoveをクラス追加
-      $('#page-top').removeClass('UpMove'); //UpMoveを削除
+      $('.page-top').addClass('DownMove'); //DownMoveをクラス追加
+      $('.page-top').removeClass('UpMove'); //UpMoveを削除
     }
   }
 }
 
-// #page-topをクリックした際の設定
-$('#page-top').click(function () {
+// .page-topをクリックした際の設定
+$('.page-top').click(function () {
   $('body,html').animate(
     {
       scrollTop: 0, //ページトップまでスクロール

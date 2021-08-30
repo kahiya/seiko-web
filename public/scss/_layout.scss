@@ -211,7 +211,8 @@ h1,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 
   @include mq-d {
     flex-direction: row-reverse;
@@ -294,6 +295,14 @@ h1,
   text-align: center;
   flex-wrap: wrap;
   overflow: hidden;
+
+  @include mq-d {
+    margin-bottom: 30px;
+  }
+
+  @include mq-m {
+    margin-bottom: size-m(20);
+  }
 }
 
 .blog-area article:nth-of-type(1) {
@@ -546,7 +555,7 @@ h1,
   font-size: 0.7rem;
 }
 
-#footer #page-top span {
+#footer .page-top span {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -589,4 +598,47 @@ h1,
   @include mq-m {
     font-size: size-m(28);
   }
+}
+
+/*==================================================
+機能編　8-1-4	ページ内にある指定の範囲内で下から出現
+===================================*/
+
+/*リンクの形状*/
+.page-top-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $col_red;
+  width: 60px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+.page-top-btn a:hover {
+  background: #999;
+  height: 55px;
+}
+
+/*リンクを右下に固定*/
+.page-top-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 600;
+  /*はじめは非表示*/
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+//ページ遷移ボタン
+.btn-block {
+  width: 100%;
+  margin: auto;
+  text-align: center;
 }

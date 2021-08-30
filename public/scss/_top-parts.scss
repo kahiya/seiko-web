@@ -348,13 +348,24 @@ body.appear #wrapper {
   position: relative;
   /*ボタンの形状*/
   display: inline-block;
-  padding: 10px 30px;
   color: $col_red;
   border: 1px solid $col_red;
   text-decoration: none;
   outline: none;
   /*はみ出す背景色を隠す*/
   overflow: hidden;
+
+  @include mq-d {
+    padding: 10px 30px;
+  }
+
+  @include mq-m {
+    padding-top: size-m(15);
+    padding-bottom: size-m(15);
+    padding-left: size-m(30);
+    padding-right: size-m(30);
+    font-size: size-m(12);
+  }
 }
 
 /*hoverした際のボタンの形状*/
@@ -433,7 +444,7 @@ body.appear #wrapper {
 ===================================*/
 
 /*リンクの形状*/
-#page-top a {
+.page-top a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,17 +459,17 @@ body.appear #wrapper {
   transition: all 0.3s;
 }
 
-#page-top a:hover {
+.page-top a:hover {
   background: #999;
   height: 55px;
 }
 
 /*リンクを右下に固定*/
-#page-top {
+.page-top {
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 600;
   /*はじめは非表示*/
   opacity: 0;
   transform: translateY(100px);
@@ -466,7 +477,7 @@ body.appear #wrapper {
 
 /*　上に上がる動き　*/
 
-#page-top.UpMove {
+.page-top.UpMove {
   animation: UpAnime 0.5s forwards;
 }
 @keyframes UpAnime {
@@ -482,7 +493,7 @@ body.appear #wrapper {
 
 /*　下に下がる動き　*/
 
-#page-top.DownMove {
+.page-top.DownMove {
   animation: DownAnime 0.5s forwards;
 }
 @keyframes DownAnime {
