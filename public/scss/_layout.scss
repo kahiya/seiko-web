@@ -581,4 +581,12 @@ h1,
 .page-header-title {
   color: #fff;
   text-align: center;
+
+  @include mq-d {
+    font-size: 36px;
+  }
+
+  @include mq-m {
+    font-size: size-m(28);
+  }
 }
