@@ -8,164 +8,11 @@
 }
 */
 /*===========================================================*/
-/* 機能編 4-1-1数字カウントアップ*/
+/* 機能編 5-3-1中心から外に線が伸びる（下部）*/
 /*===========================================================*/
-/* Loading背景画面設定　*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap");
-#splash {
-  /*fixedで全面に固定*/
-  position: fixed;
-  z-index: 99999;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-}
-
-/*===========================================================*/
-/* 機能編 5-1-14 クリックしたらナビが右から左に出現*/
-/*===========================================================*/
-/*========= ナビゲーションのためのCSS ===============*/
-#g-nav {
-  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-  position: fixed;
-  z-index: 999;
-  /*ナビのスタート位置と形状*/
-  top: 0;
-  right: -100%;
-  width: 30%;
-  height: 100vh;
-  /*ナビの高さ*/
-  background: -webkit-linear-gradient(45deg, rgba(88, 182, 211, 0.9), rgba(229, 93, 135, 0.9));
-  background: linear-gradient(45deg, rgba(88, 182, 211, 0.9), rgba(229, 93, 135, 0.9));
-  /*背景色（グラデーション）*/
-  /*動き*/
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-/*アクティブクラスがついたら位置を0に*/
-#g-nav.panelactive {
-  right: 0;
-}
-
-/*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list {
-  /*ナビの数が増えた場合縦スクロール*/
-  position: fixed;
-  z-index: 999;
-  width: 30%;
-  height: 100vh;
-  /*表示する高さ*/
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/*横幅が768px以下になった際の指定*/
-@media only screen and (max-width: 768px) {
-  #g-nav,
-  #g-nav.panelactive #g-nav-list {
-    width: 100%;
-  }
-}
-
-/*ナビゲーション*/
-#g-nav ul {
-  /*ナビゲーション天地中央揃え*/
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-/*リストのレイアウト設定*/
-#g-nav li {
-  list-style: none;
-  text-align: center;
-}
-
-#g-nav li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#g-nav li a:hover {
-  color: #ccc;
-}
-
-/*===========================================================*/
-/* 機能編 5-2-1	3本線が×に*/
-/*===========================================================*/
-.openbtn {
-  position: fixed;
-  z-index: 9999;
-  /*ボタンを最前面に*/
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-}
-
-/*×に変化*/
-.openbtn span {
-  display: inline-block;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  position: absolute;
-  left: 14px;
-  height: 3px;
-  border-radius: 2px;
-  background-color: #fff;
-  width: 45%;
-}
-
-.openbtn span:nth-of-type(1) {
-  top: 15px;
-}
-
-.openbtn span:nth-of-type(2) {
-  top: 23px;
-}
-
-.openbtn span:nth-of-type(3) {
-  top: 36px;
-}
-
-.openbtn.active span:nth-of-type(1) {
-  top: 18px;
-  left: 18px;
-  -webkit-transform: translateY(6px) rotate(-45deg);
-          transform: translateY(6px) rotate(-45deg);
-  width: 30%;
-}
-
-.openbtn.active span:nth-of-type(2) {
-  opacity: 0;
-}
-
-.openbtn.active span:nth-of-type(3) {
-  top: 30px;
-  left: 18px;
-  -webkit-transform: translateY(-6px) rotate(45deg);
-          transform: translateY(-6px) rotate(45deg);
-  width: 30%;
-}
-
-/*===========================================================*/
-/* 機能編 5-3-1中心から外に線が伸びる（下部）*/
-/*===========================================================*/
 .sort-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -623,7 +470,7 @@ img {
 
 /* font-family */
 h1,
-#g-nav-list li:nth-child(1),
+.g-nav-list li:nth-child(1),
 #menu h2,
 #blog h2,
 #footer dl dd,
@@ -728,7 +575,7 @@ h1,
 }
 
 /* gnavi */
-#g-nav-list li:nth-of-type(1) a {
+.g-nav-list li:nth-of-type(1) a {
   font-size: 2rem;
   text-transform: none;
   font-weight: normal;
@@ -737,32 +584,32 @@ h1,
   margin: 0 0 20px 0;
 }
 
-#g-nav-list li:nth-of-type(2) {
+.g-nav-list li:nth-of-type(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-#g-nav-list li:nth-of-type(3) {
+.g-nav-list li:nth-of-type(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-#g-nav-list li:nth-of-type(4) {
+.g-nav-list li:nth-of-type(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#g-nav-list li:nth-of-type(5) {
+.g-nav-list li:nth-of-type(5) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-#g-nav-list li:nth-of-type(6) {
+.g-nav-list li:nth-of-type(6) {
   -webkit-animation-delay: 1.1s;
           animation-delay: 1.1s;
 }
 
-#g-nav-list li:nth-of-type(7) {
+.g-nav-list li:nth-of-type(7) {
   -webkit-animation-delay: 1.3s;
           animation-delay: 1.3s;
 }
@@ -1724,7 +1571,7 @@ body.appear #wrapper {
 }
 
 /*========= ナビゲーションのためのCSS ===============*/
-#g-nav {
+.g-nav {
   /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
   position: fixed;
   z-index: -1;
@@ -1743,13 +1590,13 @@ body.appear #wrapper {
 }
 
 /*アクティブクラスがついたら透過なしにして最前面へ*/
-#g-nav.panelactive {
+.g-nav.panelactive {
   opacity: 1;
   z-index: 999;
 }
 
 /*ナビゲーションの縦スクロール*/
-#g-nav.panelactive #g-nav-list {
+.g-nav.panelactive .g-nav-list {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
   z-index: 999;
@@ -1761,7 +1608,7 @@ body.appear #wrapper {
 }
 
 /*ナビゲーション*/
-#g-nav ul {
+.g-nav ul {
   display: none;
   /*はじめは非表示*/
   /*ナビゲーション天地中央揃え*/
@@ -1773,17 +1620,17 @@ body.appear #wrapper {
           transform: translate(-50%, -50%);
 }
 
-#g-nav.panelactive ul {
+.g-nav.panelactive ul {
   display: block;
 }
 
 /*リストのレイアウト設定*/
-#g-nav li {
+.g-nav li {
   list-style: none;
   text-align: center;
 }
 
-#g-nav li a {
+.g-nav li a {
   color: #fff;
   text-decoration: none;
   padding: 10px;
@@ -1817,7 +1664,7 @@ body.appear #wrapper {
   position: absolute;
   left: 13px;
   height: 3px;
-  background-color: #666;
+  background-color: #fff;
 }
 
 .openbtn span:nth-of-type(1) {
