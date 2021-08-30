@@ -500,6 +500,18 @@ h1,
   overflow-x: hidden;
 }
 
+@media (min-width: 720px) {
+  .container {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 719px) {
+  .container {
+    padding-top: calc(100vw * (50 / 320));
+  }
+}
+
 .inner {
   width: 100%;
   max-width: 1300px;
@@ -1148,7 +1160,7 @@ h1,
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #b53e58;
+  background: #ab1010;
   width: 60px;
   height: 50px;
   color: #fff;
@@ -1439,7 +1451,7 @@ h1,
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #b53e58;
+  background: #ab1010;
   z-index: 9999999;
   text-align: center;
   color: #fff;
@@ -1556,7 +1568,7 @@ body.appear .splashbg2 {
   right: 50%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  background-color: #b53e58;
+  background-color: #ab1010;
   /*伸びる背景色の設定*/
 }
 
@@ -1739,7 +1751,7 @@ body.appear #wrapper {
   position: absolute;
   left: 13px;
   height: 3px;
-  background-color: #b53e58;
+  background-color: #ab1010;
   opacity: 0.6;
 }
 
@@ -1885,8 +1897,8 @@ body.appear #wrapper {
   position: relative;
   /*ボタンの形状*/
   display: inline-block;
-  color: #b53e58;
-  border: 1px solid #b53e58;
+  color: #ab1010;
+  border: 1px solid #ab1010;
   text-decoration: none;
   outline: none;
   /*はみ出す背景色を隠す*/
@@ -1934,7 +1946,7 @@ body.appear #wrapper {
   width: 1px;
   height: 0;
   /*線の形状*/
-  background: #b53e58;
+  background: #ab1010;
   /*アニメーションの設定*/
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1969,7 +1981,7 @@ body.appear #wrapper {
   /*背景の形状*/
   width: 100%;
   height: 0;
-  background: #b53e58;
+  background: #ab1010;
   /*アニメーションの設定*/
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -2000,7 +2012,7 @@ body.appear #wrapper {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #b53e58;
+  background: #ab1010;
   width: 60px;
   height: 50px;
   color: #fff;
@@ -2182,7 +2194,7 @@ body.appear #wrapper {
 }
 
 .slick-dots .slick-active button {
-  background: #b53e58;
+  background: #ab1010;
   /*ドットボタンの現在地表示の色*/
 }
 

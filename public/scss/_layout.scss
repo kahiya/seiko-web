@@ -70,6 +70,16 @@ h1,
   overflow-x: hidden;
 }
 
+.container {
+  @include mq-d {
+    padding-top: 80px;
+  }
+
+  @include mq-m {
+    padding-top: size-m(50);
+  }
+}
+
 .inner {
   width: 100%;
   max-width: 1300px;
