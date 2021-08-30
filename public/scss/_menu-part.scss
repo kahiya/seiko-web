@@ -15,7 +15,8 @@ html {
   overflow-x: hidden;
 }
 
-.page-header {
+.page-header,
+.page-header-block {
   box-sizing: border-box;
   min-height: 40vw;
   position: relative;
@@ -34,11 +35,13 @@ html {
   }
 }
 .page-header,
-.page-header:before {
+.page-header-block,
+.page-header:before,
+.page-header-block:before {
   background: 50% 50% / cover;
 }
 
-.page-header::before {
+%page-header {
   content: '';
   position: absolute;
   top: 0;
@@ -46,8 +49,6 @@ html {
   left: 0;
   right: 0;
   display: block;
-  background-color: skyblue;
-  background-image: url('../img/01.jpg');
   background-size: cover;
   -webkit-transform-origin: center center 0;
   -webkit-transform: translateZ(-1px) scale(2);
@@ -57,7 +58,32 @@ html {
   min-height: 100vh;
 }
 
-.page-header * {
+.page-header::before {
+  background-image: url('../img/01.jpg');
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.page-header-block::before {
+  @extend %page-header;
+
+  background-image: url('../img/01.jpg');
+}
+
+.page-header *,
+.page-header-block * {
   font-weight: normal;
   letter-spacing: 0.2em;
   text-align: center;
@@ -70,7 +96,8 @@ html {
   color: #fff;
 }
 
-.page-block {
+.page-block,
+.page-header-block {
   display: block;
 
   @include mq-d {

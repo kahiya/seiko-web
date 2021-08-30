@@ -1114,12 +1114,6 @@ h1,
   padding-bottom: 100px;
 }
 
-.page-header-block {
-  width: 100%;
-  height: 600px;
-  background-color: pink;
-}
-
 .page-header-title {
   color: #fff;
   text-align: center;
@@ -2624,7 +2618,7 @@ span.mask {
   }
 }
 
-#container {
+#container, .container {
   position: relative;
   /*#header-imgよりも配置を上にするためにrelativeをつける*/
   z-index: 3;
@@ -3244,7 +3238,8 @@ html {
   overflow-x: hidden;
 }
 
-.page-header {
+.page-header,
+.page-header-block {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-height: 40vw;
@@ -3255,25 +3250,29 @@ html {
 }
 
 @media (min-width: 720px) {
-  .page-header {
+  .page-header,
+  .page-header-block {
     padding: 10vw 0 5vw;
     height: 60vh;
   }
 }
 
 @media (max-width: 719px) {
-  .page-header {
+  .page-header,
+  .page-header-block {
     height: 80vh;
     padding-top: calc(100vw * (130 / 320));
   }
 }
 
 .page-header,
-.page-header:before {
+.page-header-block,
+.page-header:before,
+.page-header-block:before {
   background: 50% 50% / cover;
 }
 
-.page-header::before {
+.page-header-block::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3281,8 +3280,6 @@ html {
   left: 0;
   right: 0;
   display: block;
-  background-color: skyblue;
-  background-image: url("../img/01.jpg");
   background-size: cover;
   -webkit-transform-origin: center center 0;
   -webkit-transform: translateZ(-1px) scale(2);
@@ -3292,7 +3289,30 @@ html {
   min-height: 100vh;
 }
 
-.page-header * {
+.page-header::before {
+  background-image: url("../img/01.jpg");
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-size: cover;
+  -webkit-transform-origin: center center 0;
+  -webkit-transform: translateZ(-1px) scale(2);
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.page-header-block::before {
+  background-image: url("../img/01.jpg");
+}
+
+.page-header *,
+.page-header-block * {
   font-weight: normal;
   letter-spacing: 0.2em;
   text-align: center;
@@ -3305,18 +3325,21 @@ html {
   color: #fff;
 }
 
-.page-block {
+.page-block,
+.page-header-block {
   display: block;
 }
 
 @media (min-width: 720px) {
-  .page-block {
+  .page-block,
+  .page-header-block {
     margin-bottom: 100px;
   }
 }
 
 @media (max-width: 719px) {
-  .page-block {
+  .page-block,
+  .page-header-block {
     margin-bottom: calc(100vw * (30 / 320));
   }
 }
