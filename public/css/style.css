@@ -3555,12 +3555,12 @@ html {
 }
 
 .price-right, .price-left {
-  height: 100%;
   z-index: 100;
 }
 
 @media (min-width: 720px) {
   .price-right, .price-left {
+    height: 100%;
     top: 0;
     width: 50%;
   }
