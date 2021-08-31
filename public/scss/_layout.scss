@@ -50,17 +50,18 @@ h1,
 /* heading */
 #menu h2,
 #blog h2 {
-  font-size: 4rem;
   text-align: center;
-  margin: 0 0 50px 0;
   font-weight: normal;
-  color: #e2a2b1;
-}
+  color: $col_bk;
 
-@media screen and (max-width: 768px) {
-  #menu h2,
-  #blog h2 {
-    font-size: 3rem;
+  @include mq-d {
+    margin: 0 0 50px 0;
+    font-size: 4rem;
+  }
+
+  @include mq-m {
+    font-size: size-m(16);
+    margin-bottom: size-m(20);
   }
 }
 
@@ -280,11 +281,6 @@ h1,
   #contact .contact-img {
     margin: 0 0 50px 0;
   }
-}
-
-#contact .contact-area h2 {
-  font-size: 1.3rem;
-  margin: 0 0 10px 0;
 }
 
 #contact .contact-area dt {

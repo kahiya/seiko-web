@@ -8,7 +8,7 @@
   }
 
   @include mq-m {
-    padding-top: size-m(30);
+    padding-top: size-m(50);
   }
 }
 
@@ -21,7 +21,7 @@
   }
 
   @include mq-m {
-    font-size: size-m(14);
+    font-size: size-m(16);
   }
 }
 
@@ -36,8 +36,8 @@
 
   @include mq-m {
     line-height: 2;
-    font-size: size-m(8);
-    padding-top: size-m(20);
+    font-size: size-m(12);
+    padding-top: size-m(28);
   }
 }
 

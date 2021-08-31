@@ -59,21 +59,9 @@ html {
 }
 
 .page-header::before {
+  @extend %page-header;
+
   background-image: url('../img/01.jpg');
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  background-size: cover;
-  -webkit-transform-origin: center center 0;
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
-  min-height: 100vh;
 }
 
 .page-header-block::before {
@@ -106,6 +94,14 @@ html {
 
   @include mq-m {
     margin-bottom: size-m(30);
+  }
+}
+
+.header-bridal {
+  &::before {
+    @extend %page-header;
+
+    background-image: url('../img/bridal-img1.jpg');
   }
 }
 

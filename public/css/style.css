@@ -481,17 +481,24 @@ h1,
 /* heading */
 #menu h2,
 #blog h2 {
-  font-size: 4rem;
   text-align: center;
-  margin: 0 0 50px 0;
   font-weight: normal;
-  color: #e2a2b1;
+  color: #6d5c49;
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 720px) {
   #menu h2,
   #blog h2 {
-    font-size: 3rem;
+    margin: 0 0 50px 0;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 719px) {
+  #menu h2,
+  #blog h2 {
+    font-size: calc(100vw * (16 / 320));
+    margin-bottom: calc(100vw * (20 / 320));
   }
 }
 
@@ -750,11 +757,6 @@ h1,
   #contact .contact-img {
     margin: 0 0 50px 0;
   }
-}
-
-#contact .contact-area h2 {
-  font-size: 1.3rem;
-  margin: 0 0 10px 0;
 }
 
 #contact .contact-area dt {
@@ -1232,7 +1234,7 @@ h1,
 
 @media (max-width: 719px) {
   #top_about {
-    padding-top: calc(100vw * (30 / 320));
+    padding-top: calc(100vw * (50 / 320));
   }
 }
 
@@ -1249,7 +1251,7 @@ h1,
 
 @media (max-width: 719px) {
   .top_about-header {
-    font-size: calc(100vw * (14 / 320));
+    font-size: calc(100vw * (16 / 320));
   }
 }
 
@@ -1268,8 +1270,8 @@ h1,
 @media (max-width: 719px) {
   .top_about-note {
     line-height: 2;
-    font-size: calc(100vw * (8 / 320));
-    padding-top: calc(100vw * (20 / 320));
+    font-size: calc(100vw * (12 / 320));
+    padding-top: calc(100vw * (28 / 320));
   }
 }
 
@@ -3016,6 +3018,10 @@ span.mask {
   text-align: center;
 }
 
+.toppage-contact-header {
+  color: #6d5c49;
+}
+
 @media (min-width: 720px) {
   .toppage-contact-header {
     font-size: 1.4rem;
@@ -3284,7 +3290,7 @@ html {
   background: 50% 50% / cover;
 }
 
-.page-header-block::before {
+.page-header::before, .page-header-block::before, .header-bridal::before {
   content: '';
   position: absolute;
   top: 0;
@@ -3303,20 +3309,6 @@ html {
 
 .page-header::before {
   background-image: url("../img/01.jpg");
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  background-size: cover;
-  -webkit-transform-origin: center center 0;
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
-  min-height: 100vh;
 }
 
 .page-header-block::before {
@@ -3354,6 +3346,10 @@ html {
   .page-header-block {
     margin-bottom: calc(100vw * (30 / 320));
   }
+}
+
+.header-bridal::before {
+  background-image: url("../img/bridal-img1.jpg");
 }
 
 .page-container {
