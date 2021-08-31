@@ -489,7 +489,7 @@ h1,
 @media (min-width: 720px) {
   #menu h2,
   #blog h2 {
-    margin: 0 0 50px 0;
+    margin: 0 0 20px 0;
     font-size: 2rem;
   }
 }
@@ -727,16 +727,12 @@ h1,
 }
 
 #contact .contact-area {
-  width: 45%;
   text-align: center;
 }
 
 @media screen and (max-width: 1190px) {
   #contact .contact-img {
     width: 60%;
-  }
-  #contact .contact-area {
-    width: 35%;
   }
 }
 
@@ -757,16 +753,6 @@ h1,
   #contact .contact-img {
     margin: 0 0 50px 0;
   }
-}
-
-#contact .contact-area dt {
-  font-size: 1.2rem;
-  margin: 0 0 10px 0;
-}
-
-#contact .contact-area dd {
-  font-size: 0.8rem;
-  margin: 0 0 30px 0;
 }
 
 /* blog */
@@ -1195,6 +1181,26 @@ h1,
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.contact-sns {
+  margin-top: 20px;
+}
+
+.icon-sns {
+  vertical-align: middle;
+}
+
+@media (min-width: 720px) {
+  .icon-sns {
+    width: 15px;
+  }
+}
+
+@media (max-width: 719px) {
+  .icon-sns {
+    width: calc(100vw * (10 / 320));
+  }
 }
 
 /* Noto Serif JP */
@@ -1670,7 +1676,7 @@ body.appear #wrapper {
   width: 100%;
   height: 100vh;
   /*ナビの高さ*/
-  background: rgba(255, 162, 172, 0.8);
+  background: rgba(255, 255, 255, 0.851);
   /*背景を少し透過させる*/
   /*動き*/
   -webkit-transition: all 0.3s;
@@ -1719,7 +1725,7 @@ body.appear #wrapper {
 }
 
 .g-nav li a {
-  color: #fff;
+  color: #6d5c49;
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -1741,7 +1747,8 @@ body.appear #wrapper {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ab1010;
+  opacity: 0.8;
 }
 
 /*ボタン内側*/
@@ -1753,7 +1760,7 @@ body.appear #wrapper {
   position: absolute;
   left: 13px;
   height: 3px;
-  background-color: #ab1010;
+  background-color: #fffcf1;
   opacity: 0.6;
 }
 

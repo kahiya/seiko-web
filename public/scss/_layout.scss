@@ -55,7 +55,7 @@ h1,
   color: $col_bk;
 
   @include mq-d {
-    margin: 0 0 50px 0;
+    margin: 0 0 20px 0;
     font-size: 2rem;
   }
 
@@ -251,16 +251,12 @@ h1,
 }
 
 #contact .contact-area {
-  width: 45%;
   text-align: center;
 }
 
 @media screen and (max-width: 1190px) {
   #contact .contact-img {
     width: 60%;
-  }
-  #contact .contact-area {
-    width: 35%;
   }
 }
 
@@ -281,16 +277,6 @@ h1,
   #contact .contact-img {
     margin: 0 0 50px 0;
   }
-}
-
-#contact .contact-area dt {
-  font-size: 1.2rem;
-  margin: 0 0 10px 0;
-}
-
-#contact .contact-area dd {
-  font-size: 0.8rem;
-  margin: 0 0 30px 0;
 }
 
 /* blog */
@@ -647,4 +633,19 @@ h1,
   width: 100%;
   margin: auto;
   text-align: center;
+}
+
+.contact-sns {
+  margin-top: 20px;
+}
+
+.icon-sns {
+  vertical-align: middle;
+  @include mq-d {
+    width: 15px;
+  }
+
+  @include mq-m {
+    width: size-m(10);
+  }
 }
