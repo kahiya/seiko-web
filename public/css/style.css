@@ -2656,8 +2656,8 @@ span.mask {
 
 @media (max-width: 719px) {
   .hero-title-logo {
-    width: calc(100vw * (90 / 320));
-    padding-top: calc(100vw * (100 / 320));
+    width: calc(100vw * (130 / 320));
+    padding-top: calc(100vw * (150 / 320));
   }
 }
 
