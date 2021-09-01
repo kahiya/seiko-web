@@ -113,6 +113,7 @@ html {
   }
 
   @include mq-m {
+    padding-top: size-m(30);
     padding-bottom: size-m(200);
   }
 }
@@ -121,7 +122,7 @@ html {
   height: 600px;
 
   @include mq-d {
-    padding: 50px;
+    padding-top: 100px;
   }
 
   @include mq-m {
@@ -131,9 +132,11 @@ html {
 
 .intro-lead-note {
   color: $col_bk;
+  margin: auto;
 
   @include mq-d {
     height: 300px;
+    max-width: 800px;
   }
 
   @include mq-m {
@@ -144,6 +147,16 @@ html {
 
 .intro-note {
   color: $col_bk;
+  display: inline-block;
+
+  @include mq-d {
+    max-width: 380px;
+    font-size: 16px;
+  }
+
+  @include mq-m {
+    max-width: size-m(280);
+  }
 }
 
 .intro-inner {
@@ -151,7 +164,7 @@ html {
   display: block;
 
   @include mq-d {
-    margin-bottom: 200px;
+    //    margin-bottom: 200px;
     height: 750px;
   }
 
@@ -171,13 +184,12 @@ html {
   vertical-align: middle;
 
   @include mq-d {
-    padding: 50px 100px;
-    height: 250px;
+    padding: 60px 60px;
   }
 
   @include mq-m {
-    padding: size-m(10);
-    height: size-m(100);
+    padding: size-m(20);
+    width: size-m(280);
   }
 }
 
@@ -201,7 +213,7 @@ html {
   right: 0;
 
   @include mq-d {
-    top: 300px;
+    top: 250px;
   }
 
   @include mq-m {
@@ -249,7 +261,7 @@ html {
   }
 
   @include mq-m {
-    width: size-m(180);
+    width: size-m(150);
     margin-bottom: size-m(20);
   }
 }
@@ -269,7 +281,7 @@ html {
   @include mq-d {
     height: 100%;
     top: 0;
-    width: 50%;
+    width: 48%;
   }
 
   @include mq-m {
@@ -368,7 +380,7 @@ html {
   }
 }
 
-.menupage_price {
+.menupage_price-title {
   width: 100%;
   border-bottom: 1px solid $col_bk;
 
@@ -380,7 +392,7 @@ html {
 
   @include mq-m {
     margin-bottom: size-m(5);
-    font-size: size-m(16);
+    font-size: size-m(18);
     padding-bottom: 0;
   }
 }

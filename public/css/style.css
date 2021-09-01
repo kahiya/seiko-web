@@ -3371,6 +3371,7 @@ html {
 
 @media (max-width: 719px) {
   .page-container {
+    padding-top: calc(100vw * (30 / 320));
     padding-bottom: calc(100vw * (200 / 320));
   }
 }
@@ -3381,7 +3382,7 @@ html {
 
 @media (min-width: 720px) {
   .intro {
-    padding: 50px;
+    padding-top: 100px;
   }
 }
 
@@ -3393,11 +3394,13 @@ html {
 
 .intro-lead-note {
   color: #6d5c49;
+  margin: auto;
 }
 
 @media (min-width: 720px) {
   .intro-lead-note {
     height: 300px;
+    max-width: 800px;
   }
 }
 
@@ -3410,6 +3413,20 @@ html {
 
 .intro-note {
   color: #6d5c49;
+  display: inline-block;
+}
+
+@media (min-width: 720px) {
+  .intro-note {
+    max-width: 380px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 719px) {
+  .intro-note {
+    max-width: calc(100vw * (280 / 320));
+  }
 }
 
 .intro-inner {
@@ -3419,7 +3436,6 @@ html {
 
 @media (min-width: 720px) {
   .intro-inner {
-    margin-bottom: 200px;
     height: 750px;
   }
 }
@@ -3445,15 +3461,14 @@ html {
 
 @media (min-width: 720px) {
   .intro-text-block {
-    padding: 50px 100px;
-    height: 250px;
+    padding: 60px 60px;
   }
 }
 
 @media (max-width: 719px) {
   .intro-text-block {
-    padding: calc(100vw * (10 / 320));
-    height: calc(100vw * (100 / 320));
+    padding: calc(100vw * (20 / 320));
+    width: calc(100vw * (280 / 320));
   }
 }
 
@@ -3484,7 +3499,7 @@ html {
 
 @media (min-width: 720px) {
   .right {
-    top: 300px;
+    top: 250px;
   }
 }
 
@@ -3545,7 +3560,7 @@ html {
 
 @media (max-width: 719px) {
   .menu-page-title {
-    width: calc(100vw * (180 / 320));
+    width: calc(100vw * (150 / 320));
     margin-bottom: calc(100vw * (20 / 320));
   }
 }
@@ -3569,7 +3584,7 @@ html {
   .price-right, .price-left {
     height: 100%;
     top: 0;
-    width: 50%;
+    width: 48%;
   }
 }
 
@@ -3674,13 +3689,13 @@ html {
   }
 }
 
-.menupage_price {
+.menupage_price-title {
   width: 100%;
   border-bottom: 1px solid #6d5c49;
 }
 
 @media (min-width: 720px) {
-  .menupage_price {
+  .menupage_price-title {
     margin-bottom: 10px;
     padding-bottom: 20px;
     font-size: 32px;
@@ -3688,9 +3703,9 @@ html {
 }
 
 @media (max-width: 719px) {
-  .menupage_price {
+  .menupage_price-title {
     margin-bottom: calc(100vw * (5 / 320));
-    font-size: calc(100vw * (16 / 320));
+    font-size: calc(100vw * (18 / 320));
     padding-bottom: 0;
   }
 }
